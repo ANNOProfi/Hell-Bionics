@@ -17,12 +17,13 @@
       <li Class="HediffCompProperties_VerbGiver">
         <tools>
           <li>
-            <label>helldrill cut</label>
+            <label>helldrill stab</label>
             <capacities>
-              <li>Cut</li>
+              <li>Stab</li>
             </capacities>
             <power>30</power>
-            <cooldownTime>1.6</cooldownTime>
+            <cooldownTime>3</cooldownTime>
+            <armorPenetration>0.45</armorPenetration>
             <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
           </li>
         </tools>
@@ -68,7 +69,7 @@ even in it's regular hand configuration.</description>
     <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
     <statBases>
       <Mass>0.4</Mass>
-	        <MarketValue>1850</MarketValue>
+	    <MarketValue>1850</MarketValue>
     </statBases>
 	    <techHediffsTags>
       <li>Advanced</li>

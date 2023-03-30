@@ -25,16 +25,17 @@
               <li>Cut</li>
             </capacities>
             <power>20</power>
-            <cooldownTime>1.3</cooldownTime>
+            <cooldownTime>1</cooldownTime>
+            <armorPenetration>0.5</armorPenetration>
             <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
           </li>
-        </tools>
+            </tools>
          </li>
       </comps>
     <stages>
       <li>
         <statOffsets>
-      <MiningSpeed>0.30</MiningSpeed>
+        <MiningSpeed>0.30</MiningSpeed>
         </statOffsets>
       </li>
     </stages>
@@ -59,7 +60,7 @@ The blade is covered in a layer of plasma, hence it is colloqially known as the 
 It enhances the melee abilities of the user even further, at the cost of the plantworking benefits. 
 Ironically, the heat of the blades makes the user more suited for cutting through stone. 
 
-The fine manipulation of the user will also decrease, because, in case you haven't noticed, they've got chainsaws for hands.</description>
+The fine motor manipulation of the user will also decrease, because, in case you haven't noticed, they've got chainsaws for hands.</description>
 	  <graphicData>
 			<texPath>Things/Item/BodyPart/Hellsaw_arm</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -72,7 +73,7 @@ The fine manipulation of the user will also decrease, because, in case you haven
     <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
     <statBases>
       <Mass>0.4</Mass>
-	        <MarketValue>2000</MarketValue>
+	    <MarketValue>2000</MarketValue>
     </statBases>
 	    <techHediffsTags>
       <li>Advanced</li>

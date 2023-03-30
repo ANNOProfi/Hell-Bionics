@@ -7,5 +7,9 @@
 	<supportedVersions>
 		<li>1.4</li>
 	</supportedVersions>
-	<description>Some variations of regular Bionics, with focus on fire, plasma and generally a doomlike hell-theme.</description>
+	<description>Some variations of regular Bionics, with focus on fire, plasma and generally a doomlike hell theme.</description>
+
+	<loadAfter>
+		<li>Ludeon.RimWorld</li>
+	</loadAfter>
 </ModMetaData>

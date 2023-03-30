@@ -14,7 +14,7 @@
     </graphicData>
     <statBases>
       <MaxHitPoints>50</MaxHitPoints>
-      <Flammability>0.7</Flammability>
+      <Flammability>0.2</Flammability>
 			<Beauty>0</Beauty>
 			<DeteriorationRate>2.0</DeteriorationRate>
 			<Mass>1</Mass>
