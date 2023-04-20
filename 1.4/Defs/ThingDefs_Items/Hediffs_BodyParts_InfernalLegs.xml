@@ -6,7 +6,7 @@
     <label>infernal leg</label>
     <labelNoun>an infernal leg</labelNoun>
     <description>An installed infernal leg.</description>
-    <descriptionHyperlinks><ThingDef>InfernalLeg</ThingDef></descriptionHyperlinks>
+    <descriptionHyperlinks><ThingDef>HB_InfernalLeg</ThingDef></descriptionHyperlinks>
     <spawnThingOnRemoved>HB_InfernalLeg</spawnThingOnRemoved>
     <addedPartProps>
       <solid>true</solid>
@@ -25,7 +25,7 @@
 		</thingCategories>
   </ThingDef>
 
-  <ThingDef ParentName="HB_BaseInfernalleg">
+  <ThingDef ParentName="HB_BASEInfernalLeg">
     <defName>HB_InfernalLeg</defName>
     <label>infernal leg</label>
     <description>A prosthetic leg in the shape of goat's leg.</description>
@@ -33,7 +33,7 @@
 			<texPath>Things/Item/BodyPart/Infernal_leg</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
-    <descriptionHyperlinks><RecipeDef>InstallInfernalLeg</RecipeDef></descriptionHyperlinks>
+    <descriptionHyperlinks><RecipeDef>HB_InstallInfernalLeg</RecipeDef></descriptionHyperlinks>
     <costList>
       <Plasteel>80</Plasteel>
       <ComponentSpacer>6</ComponentSpacer>
@@ -41,6 +41,7 @@
     <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
     <statBases>
       <Mass>8</Mass>
+	  <MarketValue>2000</MarketValue>
     </statBases>
   </ThingDef>
 
