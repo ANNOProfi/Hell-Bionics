@@ -60,7 +60,8 @@ The blade is covered in a layer of plasma, hence it is colloqially known as the 
 It enhances the melee abilities of the user even further, at the cost of the plantworking benefits. 
 Ironically, the heat of the blades makes the user more suited for cutting through stone. 
 
-The fine motor manipulation of the user will also decrease, because, in case you haven't noticed, they've got chainsaws for hands.</description>
+The blade is partially retractable while deavtivated, 
+but fine motor manipulation of the user will still decrease, because, in case you haven't noticed, they've got chainsaws for hands.</description>
 	  <graphicData>
 			<texPath>Things/Item/BodyPart/Hellsaw_arm</texPath>
 			<graphicClass>Graphic_Single</graphicClass>

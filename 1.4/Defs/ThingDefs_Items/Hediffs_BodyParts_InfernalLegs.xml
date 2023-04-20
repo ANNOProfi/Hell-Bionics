@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>HB_InfernalLeg</defName>
+    <label>infernal leg</label>
+    <labelNoun>an infernal leg</labelNoun>
+    <description>An installed infernal leg.</description>
+    <descriptionHyperlinks><ThingDef>InfernalLeg</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>HB_InfernalLeg</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.50</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef Name="HB_BASEInfernalLeg" ParentName="HBBodyPartModBase" Abstract="True">
+    <techLevel>Spacer</techLevel>
+		<tradeTags>
+			<li>Bionic</li>
+		</tradeTags>
+		<thingCategories>
+			<li>BodyPartsBionic</li>
+		</thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="HB_BaseInfernalleg">
+    <defName>HB_InfernalLeg</defName>
+    <label>infernal leg</label>
+    <description>A prosthetic leg in the shape of goat's leg.</description>
+    <graphicData>
+			<texPath>Things/Item/BodyPart/Infernal_leg</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+    <descriptionHyperlinks><RecipeDef>InstallInfernalLeg</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Plasteel>80</Plasteel>
+      <ComponentSpacer>6</ComponentSpacer>
+    </costList>
+    <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+    <statBases>
+      <Mass>8</Mass>
+    </statBases>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>HB_InstallInfernalLeg</defName>
+    <label>install infernal leg</label>
+    <description>Install an infernal leg.</description>
+    <descriptionHyperlinks>
+      <ThingDef>HB_InfernalLeg</ThingDef>
+      <HediffDef>HB_InfernalLeg</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing infernal leg.</jobString>
+		<workAmount>4000</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>HB_InfernalLeg</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>HB_InfernalLeg</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Leg</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>HB_InfernalLeg</addsHediff>
+	</RecipeDef>
+</Defs>
