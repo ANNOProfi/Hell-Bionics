@@ -38,17 +38,7 @@
     </stages>
   </HediffDef>
 
-	<ThingDef Name="HB_BASEHelldrillArm" ParentName="HBBodyPartModBase" Abstract="True">
-	    <techLevel>Spacer</techLevel>
-		<tradeTags>
-			<li>Bionic</li>
-		</tradeTags>
-		<thingCategories>
-			<li>BodyPartsBionic</li>
-		</thingCategories>
-	</ThingDef>
-
-  <ThingDef ParentName="HB_BASEHelldrillArm">
+  <ThingDef ParentName="HB_BASE">
     <defName>HB_HelldrillArm</defName>
     <label>helldrill arm</label>
     <description>An advanced arm replacement, upgraded with plasma sword technology. The hand and forearm can form a plasteel reinforced drill, which is coated in a layer of plasma.

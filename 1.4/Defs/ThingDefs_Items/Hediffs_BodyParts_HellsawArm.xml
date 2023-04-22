@@ -41,17 +41,7 @@
     </stages>
   </HediffDef>
 
-	<ThingDef Name="HB_BASEHellsawArm" ParentName="HBBodyPartModBase" Abstract="True">
-	<techLevel>Spacer</techLevel>
-		<tradeTags>
-			<li>Bionic</li>
-		</tradeTags>
-		<thingCategories>
-			<li>BodyPartsBionic</li>
-		</thingCategories>
-	</ThingDef>
-
-  <ThingDef ParentName="HB_BASEHellsawArm">
+  <ThingDef ParentName="HB_BASE">
     <defName>HB_HellsawArm</defName>
     <label>hellsaw arm</label>
     <description>A chainsaw arm prosthetic, upgraded with advanced plasma sword technology.
