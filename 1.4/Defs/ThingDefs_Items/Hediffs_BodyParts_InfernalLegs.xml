@@ -13,19 +13,52 @@
       <partEfficiency>1.50</partEfficiency>
       <betterThanNatural>true</betterThanNatural>
     </addedPartProps>
+    <comps>
+        <li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
+          <verbs>
+            <li>
+              <verbClass>Verb_Jump</verbClass>
+              <label>jump</label>
+              <violent>true</violent>
+              <hasStandardCommand>true</hasStandardCommand>
+              <onlyManualCast>True</onlyManualCast>
+              <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+              <warmupTime>0.5</warmupTime>
+              <warmupEffecter>JumpWarmupEffect</warmupEffecter>
+              <requireLineOfSight>true</requireLineOfSight>
+              <flightEffecterDef>JumpFlightEffect</flightEffecterDef>
+              <soundLanding>JumpPackLand</soundLanding>
+              <targetParams>
+                <canTargetLocations>true</canTargetLocations>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetSelf>false</canTargetSelf>
+              </targetParams>
+              <range>19.9</range>
+            </li>
+          </verbs>
+          <verbProps>
+            <li>
+              <label>jump</label>
+              <visualLabel>infernal dash</visualLabel>
+              <graphic>
+                <texPath>Things/Pawn/Humanlike/Apparel/JumpPack/JumpPack</texPath>
+                <graphicClass>Graphic_Single</graphicClass>
+              </graphic>
+              <brawlerCaresAbout>false</brawlerCaresAbout>
+              <comps>
+                <li Class="MVCF.VerbComps.VerbCompProperties_Cooldown">
+                  <compClass>MVCF.VerbComps.VerbComp_Cooldown</compClass>
+                  <cooldownTime>20</cooldownTime>
+                </li>
+              </comps>
+            </li>
+          </verbProps>
+        </li>
+      </comps>
   </HediffDef>
 
-  <ThingDef Name="HB_BASEInfernalLeg" ParentName="HBBodyPartModBase" Abstract="True">
-    <techLevel>Spacer</techLevel>
-		<tradeTags>
-			<li>Bionic</li>
-		</tradeTags>
-		<thingCategories>
-			<li>BodyPartsBionic</li>
-		</thingCategories>
-  </ThingDef>
-
-  <ThingDef ParentName="HB_BASEInfernalLeg">
+  <ThingDef ParentName="HB_BASE">
     <defName>HB_InfernalLeg</defName>
     <label>infernal leg</label>
     <description>A prosthetic leg in the shape of goat's leg.</description>
@@ -38,10 +71,11 @@
       <Plasteel>80</Plasteel>
       <ComponentSpacer>6</ComponentSpacer>
     </costList>
+	  <tickerType>Normal</tickerType>
     <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
     <statBases>
       <Mass>8</Mass>
-	  <MarketValue>2000</MarketValue>
+	    <MarketValue>2000</MarketValue>
     </statBases>
   </ThingDef>
 
