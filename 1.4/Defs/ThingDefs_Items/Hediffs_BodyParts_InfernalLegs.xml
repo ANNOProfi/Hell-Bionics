@@ -14,6 +14,27 @@
       <betterThanNatural>true</betterThanNatural>
     </addedPartProps>
     <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+          <tools>
+            <li>
+              <label>infernal kick</label>
+              <capacities>
+                <li>Blunt</li>
+              </capacities>
+              <power>30</power>
+              <cooldownTime>3</cooldownTime>
+              <armorPenetration>0.45</armorPenetration>
+              <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+              <extraMeleeDamages>
+                  <li>
+                    <def>Burn</def>
+                    <amount>6</amount>
+                    <chance>1</chance>
+                  </li>
+                </extraMeleeDamages>
+            </li>
+          </tools>
+        </li>
         <li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
           <verbs>
             <li>
@@ -34,7 +55,7 @@
                 <canTargetBuildings>false</canTargetBuildings>
                 <canTargetSelf>false</canTargetSelf>
               </targetParams>
-              <range>19.9</range>
+              <range>10</range>
             </li>
           </verbs>
           <verbProps>
@@ -61,7 +82,9 @@
   <ThingDef ParentName="HB_BASE">
     <defName>HB_InfernalLeg</defName>
     <label>infernal leg</label>
-    <description>A prosthetic leg in the shape of goat's leg.</description>
+    <description>A prosthetic leg in the shape of goat's leg. Because of this, the user will become slightly faster than a normal human
+
+This bionic is equipped with plasma jets, which enable the user to heat up their hooves for extra damage and to propel themselves over short distances.</description>
     <graphicData>
 			<texPath>Things/Item/BodyPart/Infernal_leg</texPath>
 			<graphicClass>Graphic_Single</graphicClass>

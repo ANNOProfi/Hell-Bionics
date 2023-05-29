@@ -25,6 +25,13 @@
             <cooldownTime>3</cooldownTime>
             <armorPenetration>0.45</armorPenetration>
             <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+            <extraMeleeDamages>
+                <li>
+                  <def>Burn</def>
+                  <amount>6</amount>
+                  <chance>1</chance>
+                </li>
+              </extraMeleeDamages>
           </li>
         </tools>
       </li>
