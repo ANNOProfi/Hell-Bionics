@@ -31,6 +31,6 @@
     <li>Ludeon.RimWorld</li>
     <li>brrainz.harmony</li>
     <li>OskarPotocki.VanillaFactionsExpanded.Core</li>
-    <li>jecrell.jecstools</li>
+    <!--<li>jecrell.jecstools</li>-->
   </loadAfter>
 </ModMetaData>
