@@ -34,7 +34,7 @@
     <description>An artificial jaw, that doubles as a mask, but still retains full functionality in regards to eating.
 As this mask resembles the face of a demon, other people find it intimidating.</description>
 	  <graphicData>
-			<texPath>Things/Item/BodyPart/Infernal_leg</texPath>
+			<texPath>Things/Item/BodyPart/Infernal_jaw</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
     <descriptionHyperlinks><RecipeDef>HB_InstallInfernalJaw</RecipeDef></descriptionHyperlinks>
