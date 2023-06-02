@@ -11,10 +11,53 @@
     <descriptionHyperlinks><ThingDef>HB_InfernalJaw</ThingDef></descriptionHyperlinks>
     <spawnThingOnRemoved>HB_InfernalJaw</spawnThingOnRemoved>
     <addedPartProps>
-	  <partEfficiency>1.2</partEfficiency>
+	    <partEfficiency>1.2</partEfficiency>
       <solid>true</solid>
-	<betterThanNatural>true</betterThanNatural>
+	    <betterThanNatural>true</betterThanNatural>
     </addedPartProps>
+    <comps>
+      <li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
+        <verbs>
+          <li>
+            <verbClass>Verb_SpewFire</verbClass>
+            <label>spew fire</label>
+            <violent>true</violent>
+            <hasStandardCommand>true</hasStandardCommand>
+            <onlyManualCast>True</onlyManualCast>
+            <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+            <warmupTime>0.2</warmupTime>
+            <!--<warmupEffecter>JumpWarmupEffect</warmupEffecter>
+            <requireLineOfSight>true</requireLineOfSight>
+            <flightEffecterDef>JumpFlightEffect</flightEffecterDef>
+            <soundLanding>JumpPackLand</soundLanding>-->
+            <targetParams>
+              <canTargetLocations>true</canTargetLocations>
+              <canTargetPawns>true</canTargetPawns>
+              <canTargetBuildings>false</canTargetBuildings>
+              <canTargetSelf>false</canTargetSelf>
+            </targetParams>
+            <range>10</range>
+          </li>
+        </verbs>
+        <verbProps>
+          <li>
+            <label>spew fire</label>
+            <visualLabel>infernal breath</visualLabel>
+            <graphic>
+              <texPath>UI/Abilities/FireSpew</texPath>
+              <graphicClass>Graphic_Single</graphicClass>
+            </graphic>
+            <brawlerCaresAbout>false</brawlerCaresAbout>
+            <comps>
+              <li Class="MVCF.VerbComps.VerbCompProperties_Cooldown">
+                <compClass>MVCF.VerbComps.VerbComp_Cooldown</compClass>
+                <cooldownTime>20</cooldownTime>
+              </li>
+            </comps>
+          </li>
+        </verbProps>
+      </li>
+    </comps>
     <stages>
       <li>
         <statOffsets>
