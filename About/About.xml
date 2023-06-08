@@ -11,25 +11,18 @@
 
 	<modDependencies>
     <li>
-      <packageId>brrainz.harmony</packageId>
-      <displayName>Harmony</displayName>
-      <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
-      <steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2009463077</steamWorkshopUrl>
-    </li>
-    <li>
       <packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
       <displayName>Vanilla Expanded Framework</displayName>
       <steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2023507013</steamWorkshopUrl>
     </li>
-    <li>
+    <!--<li>
       <packageID>jecrell.jecstools</packageID>
       <displayName>Jecs Tools</displayName>
       <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=932008009</steamWorkshopUrl>
-    </li>
+    </li>-->
   </modDependencies>
   <loadAfter>
     <li>Ludeon.RimWorld</li>
-    <li>brrainz.harmony</li>
     <li>OskarPotocki.VanillaFactionsExpanded.Core</li>
     <!--<li>jecrell.jecstools</li>-->
   </loadAfter>
