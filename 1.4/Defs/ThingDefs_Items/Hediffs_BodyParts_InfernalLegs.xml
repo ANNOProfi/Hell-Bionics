@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>HB_InfernalLeg</defName>
+    <label>infernal leg</label>
+    <labelNoun>an infernal leg</labelNoun>
+    <description>An installed infernal leg.</description>
+    <descriptionHyperlinks><ThingDef>HB_InfernalLeg</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>HB_InfernalLeg</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.50</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <comps>
+      <!-- <li Class="HediffCompProperties_VerbGiver">
+          <tools>
+            <li>
+              <label>infernal kick</label>
+              <capacities>
+                <li>Blunt</li>
+              </capacities>
+              <power>30</power>
+              <cooldownTime>3</cooldownTime>
+              <armorPenetration>0.45</armorPenetration>
+              <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+              <extraMeleeDamages>
+                  <li>
+                    <def>Burn</def>
+                    <amount>6</amount>
+                    <chance>1</chance>
+                  </li>
+                </extraMeleeDamages>
+            </li>
+          </tools>
+      </li>-->
+      <li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
+        <tools>
+            <li>
+              <label>infernal kick</label>
+              <capacities>
+                <li>Blunt</li>
+              </capacities>
+              <power>30</power>
+              <cooldownTime>3</cooldownTime>
+              <armorPenetration>0.45</armorPenetration>
+              <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+              <extraMeleeDamages>
+                  <li>
+                    <def>Burn</def>
+                    <amount>6</amount>
+                    <chance>100</chance>
+                  </li>
+                </extraMeleeDamages>
+            </li>
+        </tools>
+        <verbs>
+          <li>
+            <verbClass>Verb_Jump</verbClass>
+            <label>jump</label>
+            <violent>true</violent>
+            <hasStandardCommand>true</hasStandardCommand>
+            <onlyManualCast>True</onlyManualCast>
+            <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+            <warmupTime>0.5</warmupTime>
+            <warmupEffecter>JumpWarmupEffect</warmupEffecter>
+            <requireLineOfSight>true</requireLineOfSight>
+            <flightEffecterDef>JumpFlightEffect</flightEffecterDef>
+            <soundLanding>JumpPackLand</soundLanding>
+            <targetParams>
+              <canTargetLocations>true</canTargetLocations>
+              <canTargetPawns>true</canTargetPawns>
+              <canTargetBuildings>false</canTargetBuildings>
+              <canTargetSelf>false</canTargetSelf>
+            </targetParams>
+            <range>10</range>
+          </li>
+        </verbs>
+        <verbProps>
+          <li>
+            <label>jump</label>
+            <visualLabel>infernal dash</visualLabel>
+            <graphic>
+              <texPath>Things/Pawn/Humanlike/Apparel/JumpPack/JumpPack</texPath>
+              <graphicClass>Graphic_Single</graphicClass>
+            </graphic>
+            <brawlerCaresAbout>false</brawlerCaresAbout>
+            <comps>
+              <li Class="MVCF.VerbComps.VerbCompProperties_Cooldown">
+                <compClass>MVCF.VerbComps.VerbComp_Cooldown</compClass>
+                <cooldownTime>20</cooldownTime>
+              </li>
+            </comps>
+          </li>
+        </verbProps>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <ThingDef ParentName="HB_BASE">
+    <defName>HB_InfernalLeg</defName>
+    <label>infernal leg</label>
+    <description>A prosthetic leg in the shape of goat's leg. Because of this, the user will become slightly faster than a normal human
+
+This bionic is equipped with plasma jets, which enable the user to heat up their hooves for extra damage and to propel themselves over short distances.</description>
+    <graphicData>
+			<texPath>Things/Item/BodyPart/Infernal_leg</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+    <descriptionHyperlinks><RecipeDef>HB_InstallInfernalLeg</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Plasteel>80</Plasteel>
+      <ComponentSpacer>6</ComponentSpacer>
+    </costList>
+	  <tickerType>Normal</tickerType>
+    <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+    <statBases>
+      <Mass>8</Mass>
+	    <MarketValue>2000</MarketValue>
+    </statBases>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>HB_InstallInfernalLeg</defName>
+    <label>install infernal leg</label>
+    <description>Install an infernal leg.</description>
+    <descriptionHyperlinks>
+      <ThingDef>HB_InfernalLeg</ThingDef>
+      <HediffDef>HB_InfernalLeg</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing infernal leg.</jobString>
+		<workAmount>4000</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>HB_InfernalLeg</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>HB_InfernalLeg</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Leg</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>HB_InfernalLeg</addsHediff>
+	</RecipeDef>
+</Defs>

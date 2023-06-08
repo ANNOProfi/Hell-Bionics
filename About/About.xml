@@ -9,7 +9,21 @@
 	</supportedVersions>
 	<description>Some variations of regular Bionics, with focus on fire, plasma and generally a doomlike hell theme.</description>
 
-	<loadAfter>
-		<li>Ludeon.RimWorld</li>
-	</loadAfter>
+	<modDependencies>
+    <li>
+      <packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
+      <displayName>Vanilla Expanded Framework</displayName>
+      <steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2023507013</steamWorkshopUrl>
+    </li>
+    <!--<li>
+      <packageID>jecrell.jecstools</packageID>
+      <displayName>Jecs Tools</displayName>
+      <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=932008009</steamWorkshopUrl>
+    </li>-->
+  </modDependencies>
+  <loadAfter>
+    <li>Ludeon.RimWorld</li>
+    <li>OskarPotocki.VanillaFactionsExpanded.Core</li>
+    <!--<li>jecrell.jecstools</li>-->
+  </loadAfter>
 </ModMetaData>

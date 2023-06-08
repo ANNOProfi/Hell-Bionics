@@ -32,4 +32,40 @@
     <pathCost>10</pathCost>	
   </ThingDef>
 
+  <ThingDef Name="HB_BASE" ParentName="HBBodyPartModBase" Abstract="True">
+    <techLevel>Spacer</techLevel>
+		<tradeTags>
+			<li>Bionic</li>
+		</tradeTags>
+		<thingCategories>
+			<li>BodyPartsBionic</li>
+		</thingCategories>
+    <statBases>
+      <WorkToMake>32000</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+      <recipeUsers>
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+
+  <MVCF.ModDef>
+    <defName>HB_HellBionics</defName>
+    <label>Hell Bionics</label>
+    <description>Infernal Leg jump</description>
+    <ActivateFeatures>
+      <li>HediffVerbs</li>
+      <li>IntegratedToggle</li>
+    </ActivateFeatures>
+  </MVCF.ModDef>
+
 </Defs>

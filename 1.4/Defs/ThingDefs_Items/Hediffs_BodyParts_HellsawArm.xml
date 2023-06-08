@@ -18,49 +18,47 @@
     </addedPartProps>
 			 <comps>
          <li Class="HediffCompProperties_VerbGiver">
-            <tools>
-          <li>
-            <label>hellsaw slash</label>
-            <capacities>
-              <li>Cut</li>
-            </capacities>
-            <power>20</power>
-            <cooldownTime>1</cooldownTime>
-            <armorPenetration>0.5</armorPenetration>
-            <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-          </li>
-            </tools>
+          <tools>
+            <li>
+              <label>hellsaw slash</label>
+              <capacities>
+                <li>Cut</li>
+              </capacities>
+              <power>20</power>
+              <cooldownTime>1</cooldownTime>
+              <armorPenetration>0.5</armorPenetration>
+              <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+              <extraMeleeDamages>
+                <li>
+                  <def>Burn</def>
+                  <amount>6</amount>
+                  <chance>1</chance>
+                </li>
+              </extraMeleeDamages>
+            </li>
+          </tools>
          </li>
       </comps>
     <stages>
       <li>
         <statOffsets>
-        <MiningSpeed>0.30</MiningSpeed>
+          <MiningSpeed>0.30</MiningSpeed>
         </statOffsets>
       </li>
     </stages>
   </HediffDef>
 
-	<ThingDef Name="HB_BASEHellsawArm" ParentName="HBBodyPartModBase" Abstract="True">
-	<techLevel>Spacer</techLevel>
-		<tradeTags>
-			<li>Bionic</li>
-		</tradeTags>
-		<thingCategories>
-			<li>BodyPartsBionic</li>
-		</thingCategories>
-	</ThingDef>
-
-  <ThingDef ParentName="HB_BASEHellsawArm">
+  <ThingDef ParentName="HB_BASE">
     <defName>HB_HellsawArm</defName>
     <label>hellsaw arm</label>
     <description>A chainsaw arm prosthetic, upgraded with advanced plasma sword technology.
 The blade is covered in a layer of plasma, hence it is colloqially known as the hellsaw arm. 
 
-It enhances the melee abilities of the user even further, at the cost of the plantworking benefits. 
+It enhances the melee abilities of the user even further than a regular chainsaw arm, at the cost of the plantworking benefits. 
 Ironically, the heat of the blades makes the user more suited for cutting through stone. 
 
-The fine motor manipulation of the user will also decrease, because, in case you haven't noticed, they've got chainsaws for hands.</description>
+The blade is partially retractable while deavtivated, 
+but fine motor manipulation of the user will still decrease, because, in case you haven't noticed, they've got chainsaws for hands.</description>
 	  <graphicData>
 			<texPath>Things/Item/BodyPart/Hellsaw_arm</texPath>
 			<graphicClass>Graphic_Single</graphicClass>

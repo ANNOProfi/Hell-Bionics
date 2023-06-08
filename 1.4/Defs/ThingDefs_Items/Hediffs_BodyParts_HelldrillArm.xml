@@ -25,6 +25,13 @@
             <cooldownTime>3</cooldownTime>
             <armorPenetration>0.45</armorPenetration>
             <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+            <extraMeleeDamages>
+                <li>
+                  <def>Burn</def>
+                  <amount>6</amount>
+                  <chance>1</chance>
+                </li>
+              </extraMeleeDamages>
           </li>
         </tools>
       </li>
@@ -38,17 +45,7 @@
     </stages>
   </HediffDef>
 
-	<ThingDef Name="HB_BASEHelldrillArm" ParentName="HBBodyPartModBase" Abstract="True">
-	    <techLevel>Spacer</techLevel>
-		<tradeTags>
-			<li>Bionic</li>
-		</tradeTags>
-		<thingCategories>
-			<li>BodyPartsBionic</li>
-		</thingCategories>
-	</ThingDef>
-
-  <ThingDef ParentName="HB_BASEHelldrillArm">
+  <ThingDef ParentName="HB_BASE">
     <defName>HB_HelldrillArm</defName>
     <label>helldrill arm</label>
     <description>An advanced arm replacement, upgraded with plasma sword technology. The hand and forearm can form a plasteel reinforced drill, which is coated in a layer of plasma.
