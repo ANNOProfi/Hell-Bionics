@@ -57,9 +57,9 @@
         </tools>
         <verbs>
           <li>
-            <verbClass>Verb_Jump</verbClass>
+            <verbClass>HellBionics.Verb_Dash</verbClass>
             <label>jump</label>
-            <violent>true</violent>
+            <violent>false</violent>
             <hasStandardCommand>true</hasStandardCommand>
             <onlyManualCast>True</onlyManualCast>
             <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
@@ -93,7 +93,7 @@
               </li>
             </comps>
           </li>
-        </verbProps>
+        </verbProps><!---->
       </li>
     </comps>
   </HediffDef>
