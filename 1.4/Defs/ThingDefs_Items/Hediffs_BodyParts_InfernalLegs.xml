@@ -57,7 +57,7 @@
         </tools>
         <verbs>
           <li>
-            <verbClass>HellBionics.Verb_Dash</verbClass>
+            <verbClass>HellBionics.Verb_InfernalDash</verbClass>
             <label>jump</label>
             <violent>false</violent>
             <hasStandardCommand>true</hasStandardCommand>

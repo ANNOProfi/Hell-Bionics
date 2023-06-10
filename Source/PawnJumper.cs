@@ -9,10 +9,10 @@ namespace HellBionics
     [DefOf]
     public static class ThingDefOf
     {
-        public static ThingDef PawnJumper;
+        public static ThingDef HB_PawnDashing;
     }
 
-    public class PawnJumper : PawnFlyer
+    public class HB_PawnDashing : PawnFlyer
     {
         private Material cachedShadowMaterial;
 
@@ -42,13 +42,14 @@ namespace HellBionics
             }
         }
 
-        static PawnJumper()
+        static HB_PawnDashing()
         {
+            Log.Message("PawnJumper called");
             AnimationCurve animationCurve = new AnimationCurve();
             animationCurve.AddKey(0f, 0f);
             animationCurve.AddKey(0.1f, 0.15f);
             animationCurve.AddKey(1f, 1f);
-            PawnJumper.FlightSpeed = new Func<float, float>(animationCurve.Evaluate);
+            HB_PawnDashing.FlightSpeed = new Func<float, float>(animationCurve.Evaluate);
         }
 
         public override Vector3 DrawPos
@@ -67,14 +68,15 @@ namespace HellBionics
 
         private void RecomputePosition()
         {
+            Log.Message("PawnJumper RecomputePosition() called");
             if(this.positionLastComputedTick == this.ticksFlying)
             {
                 return;
             }
             this.positionLastComputedTick = this.ticksFlying;
 
-            float arg = 0f;
-            float num = 0f;
+            //float arg = 0f;
+            //float num = 0f;
             this.effectiveHeight = 0f;
             this.groundPos = Vector3.Lerp(this.startVec, base.DestinationPos, 0f);
             Vector3 a = new Vector3(0f, 0f, 0f);

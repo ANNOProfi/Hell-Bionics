@@ -4,9 +4,9 @@ using UnityEngine;
 
 namespace HellBionics
 {
-    public class Verb_Dash : RimWorld.Verb_Jump
+    public class Verb_InfernalDash : Verb_Jump
     {
-        /*private float cachedEffectiveRange = -1f;
+        private float cachedEffectiveRange = -1f;
 
         protected override float EffectiveRange
 		{
@@ -33,15 +33,16 @@ namespace HellBionics
 			{
 				return true;
 			}
-		}*/
+		}
 		
 
         protected override bool TryCastShot()
         {
+			Log.Message("Infernal_Dash called");
             return HellBionics.JumpUtility.DoJump(this.CasterPawn, this.currentTarget, base.ReloadableCompSource, this.verbProps);
         }
 
-        /*public override void OrderForceTarget(LocalTargetInfo target)
+        public override void OrderForceTarget(LocalTargetInfo target)
 		{
 			JumpUtility.OrderJump(this.CasterPawn, target, this, this.EffectiveRange);
 		}
@@ -73,6 +74,6 @@ namespace HellBionics
 				GenDraw.DrawTargetHighlightWithLayer(target.CenterVector3, AltitudeLayer.MetaOverlays);
 			}
 			GenDraw.DrawRadiusRing(this.caster.Position, this.EffectiveRange, Color.white, (IntVec3 c) => GenSight.LineOfSight(this.caster.Position, c, this.caster.Map, false, null, 0, 0) && JumpUtility.ValidJumpTarget(this.caster.Map, c));
-		}*/
+		}
     }
 }

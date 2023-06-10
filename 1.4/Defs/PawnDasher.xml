@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+    <ThingDef Name="HB_PawnDashBase" Abstract="true" ParentName="PawnFlyerBase">
+        <label>digging</label>
+        <altitudeLayer>LowPlant</altitudeLayer>
+    </ThingDef>
+        
+    <ThingDef ParentName="HB_PawnDashBase">
+        <defName>HB_PawnDashing</defName>
+        <thingClass>HellBionics.Verb_InfernalDash</thingClass> <!-- replace with HellBionics.Verb_Dash -->
+        <pawnFlyer>
+            <flightDurationMin>0.5</flightDurationMin>
+            <flightSpeed>6</flightSpeed>
+        </pawnFlyer>
+    </ThingDef>
+</Defs>
