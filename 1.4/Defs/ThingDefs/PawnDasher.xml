@@ -7,7 +7,7 @@
     </ThingDef>
         
     <ThingDef ParentName="HB_PawnDashBase">
-        <defName>HB_PawnDashing</defName>
+        <defName>HB_PawnDasher</defName>
         <thingClass>HellBionics.Verb_InfernalDash</thingClass> <!-- replace with HellBionics.Verb_Dash -->
         <pawnFlyer>
             <flightDurationMin>0.5</flightDurationMin>
