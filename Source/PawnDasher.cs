@@ -9,10 +9,10 @@ namespace HellBionics
     [DefOf]
     public static class ThingDefOf
     {
-        public static ThingDef HB_PawnDashing;
+        public static ThingDef HB_PawnDasher;
     }
 
-    public class HB_PawnDashing : PawnFlyer
+    public class HB_PawnDasher : PawnFlyer
     {
         private Material cachedShadowMaterial;
 
@@ -42,14 +42,14 @@ namespace HellBionics
             }
         }
 
-        static HB_PawnDashing()
+        static HB_PawnDasher()
         {
             Log.Message("PawnJumper called");
             AnimationCurve animationCurve = new AnimationCurve();
             animationCurve.AddKey(0f, 0f);
             animationCurve.AddKey(0.1f, 0.15f);
             animationCurve.AddKey(1f, 1f);
-            HB_PawnDashing.FlightSpeed = new Func<float, float>(animationCurve.Evaluate);
+            HB_PawnDasher.FlightSpeed = new Func<float, float>(animationCurve.Evaluate);
         }
 
         public override Vector3 DrawPos

@@ -26,7 +26,7 @@ namespace HellBionics
 			Map map = pawn.Map;
 			bool flag = Find.Selector.IsSelected(pawn);
             Log.Message("JumpUtility DoJump() called");
-			PawnFlyer pawnFlyer = PawnFlyer.MakeFlyer(HellBionics.ThingDefOf.HB_PawnDashing, pawn, cell, verbProps.flightEffecterDef, verbProps.soundLanding, verbProps.flyWithCarriedThing);
+			PawnFlyer pawnFlyer = PawnFlyer.MakeFlyer(ThingDefOf.HB_PawnDasher, pawn, cell, verbProps.flightEffecterDef, verbProps.soundLanding, verbProps.flyWithCarriedThing);
 			if (pawnFlyer != null)
 			{
 				FleckMaker.ThrowDustPuff(position.ToVector3Shifted() + Gen.RandomHorizontalVector(0.5f), map, 2f);
