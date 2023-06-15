@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+    <!--<ThingDef ParentName="BaseBullet" Name="FlyingObject_InfernalDash">
+	   <defName>FlyingObject_InfernalDash</defName>
+	   <thingClass>HellBionics.FlyingObject_InfernalDash</thingClass>
+	   <label>psionic dash</label>
+	   <graphicData>
+			<texPath>Spells/invis</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+	   <projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>Burn</damageDef>
+			<damageAmountBase>8</damageAmountBase>
+			<speed>25</speed>
+	   </projectile>
+	</ThingDef>
+	 
+    <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+        <defName>Projectile_InfernalDash</defName>
+        <thingClass>AbilityUser.Projectile_Ability</thingClass>
+        <label>psionic dash</label>
+        <graphicData>
+            <texPath>Spells/invis</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <flyOverhead>true</flyOverhead>
+            <damageDef>Burn</damageDef>
+            <damageAmountBase>8</damageAmountBase>
+            <speed>25</speed>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef Class="AbilityUser.AbilityDef" ParentName="BaseAbility">
+        <defName>InfernalDash</defName>
+        <label>infernal dash</label>
+        <MainVerb Class="AbilityUser.VerbProperties_Ability">
+            <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+            <tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+            <tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+            <tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+            <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+            <hasStandardCommand>true</hasStandardCommand>
+            <projectileDef>Projectile_InfernalDash</projectileDef>
+            <abilityDef>InfernalDash</abilityDef>
+            <warmupTime>1</warmupTime>
+            <SecondsToRecharge>10.0</SecondsToRecharge>
+            <range>24</range>
+            <burstShotCount>1</burstShotCount>
+            <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+            <soundCast>MessageBenefit</soundCast>
+            <muzzleFlashScale>20</muzzleFlashScale>
+            <isPrimary>false</isPrimary>
+        </MainVerb>
+    </ThingDef>-->
+ 
+<!--<HellBionics.HBAbilityDef ParentName="BaseAbility">
+        <defName>HB_InfernalDash</defName>
+        <label>Infernal Dash</label>
+        <uiIconPath>UI/psionicdash</uiIconPath>
+        <description>The Psionic infuses their body with an overwhelming amount of energy and uses it to propel themselves in a rapid burst of movement. Each step emits shockwaves of energy.</description>
+    <thingClass>ThingWithComps</thingClass>
+        <plasmaCost>0.25</plasmaCost>
+        <canCopy>true</canCopy>
+        <MainVerb Class="AbilityUser.VerbProperties_Ability">
+            <verbClass>HellBionics.Effect_InfernalDash</verbClass>
+                <tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+                <tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+                <tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+                <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+            <hasStandardCommand>true</hasStandardCommand>
+            <abilityDef>HB_InfernalDash</abilityDef>
+            <isViolent>true</isViolent>
+            <defaultProjectile>Projectile_InfernalDash</defaultProjectile>
+            <warmupTime>.5</warmupTime>
+            <SecondsToRecharge>5</SecondsToRecharge>
+            <range>50</range>
+            <soundCast>TM_AirWoosh</soundCast>
+            <muzzleFlashScale>20</muzzleFlashScale>
+            <isPrimary>false</isPrimary>
+            <targetParams>
+            <canTargetPawns>true</canTargetPawns>
+            <canTargetBuildings>false</canTargetBuildings>
+            <canTargetSelf>false</canTargetSelf>
+            <canTargetLocations>true</canTargetLocations>
+            </targetParams>
+        </MainVerb>
+    </HellBionics.HBAbilityDef>-->
+
+    <!--<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
+        <thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
+        <defName>Projectile_MyAbility</defName>
+        <label>my ability projectile</label>
+        <graphicData>
+            <texPath>Things/Projectile/Bullet_Small</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <flyOverhead>false</flyOverhead>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>10</damageAmountBase>
+            <speed>70</speed>
+        </projectile>
+        <preFiringInitialIntensity>0</preFiringInitialIntensity>
+        <preFiringFinalIntensity>20</preFiringFinalIntensity>
+        <postFiringInitialIntensity>20</postFiringInitialIntensity>
+        <postFiringFinalIntensity>0</postFiringFinalIntensity>
+        <preFiringDuration>10</preFiringDuration>
+        <postFiringDuration>83</postFiringDuration>
+        <StartFireChance>0.000</StartFireChance>
+    </ThingDef>
+
+    <ThingDef Class="AbiltyUser.AbilityDef" ParentName="BaseAbility">
+        <defName>MyAbility</defName>
+        <label>my ability</label>
+        <uiIconPath>UI/Glow_Corrupt</uiIconPath>
+        <description>Drain another entity of lifeforce.</description>
+        <MainVerb Class="AbilityUser.VerbProperties_Ability">
+            <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+            <tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+            <tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+            <tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+            <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+            <hasStandardCommand>true</hasStandardCommand>
+            <projectileDef>Projectile_MyAbility</projectileDef>
+            <abilityDef>MyAbility</abilityDef>
+            <warmupTime>1</warmupTime>
+            <SecondsToRecharge>10.0</SecondsToRecharge>
+            <range>24</range>
+            <burstShotCount>1</burstShotCount>
+            <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+            <soundCast>MessageBenefit</soundCast>
+            <muzzleFlashScale>20</muzzleFlashScale>
+            <isPrimary>false</isPrimary>
+        </MainVerb>
+    </ThingDef>-->
+
+    <HellBionics.InfernalAbilityDef ParentName="BaseInfernalAbility">
+        <defName>InfernalDash</defName>
+        <label>infernal dash</label>
+        <plasmaCost>0</plasmaCost>
+        <uiIconPath>UI/Abilities/FireSpew</uiIconPath>
+        <description>bla</description>
+        <MainVerb Class="AbilityUser.VerbProperties_Ability">
+            <verbClass>HellBionics.InfernalEffect_InfernalDash</verbClass>
+            <defaultProjectile>HB_InfernalProjectile</defaultProjectile>
+            <abilityDef>InfernalDash</abilityDef>
+            <isViolent>false</isViolent>
+            <warmupTime>1</warmupTime>
+            <SecondsToRecharge>10.0</SecondsToRecharge>
+            <range>10</range>
+            <burstShotCount>1</burstShotCount>
+            <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+            <isPrimary>false</isPrimary>
+            <targetParams>
+                <canTargetLocations>true</canTargetLocations>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetItems>false</canTargetItems>
+                <canTargetSelf>false</canTargetSelf>
+            </targetParams>
+            <tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+            <tooltipShowHediffsToApply>False</tooltipShowHediffsToApply>
+            <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+        </MainVerb>
+    </HellBionics.InfernalAbilityDef>
+ </Defs>

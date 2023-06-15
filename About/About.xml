@@ -15,15 +15,15 @@
       <displayName>Vanilla Expanded Framework</displayName>
       <steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2023507013</steamWorkshopUrl>
     </li>
-    <!--<li>
-      <packageID>jecrell.jecstools</packageID>
+    <li>
+      <packageId>jecrell.jecstools</packageId>
       <displayName>Jecs Tools</displayName>
       <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=932008009</steamWorkshopUrl>
-    </li>-->
+    </li>
   </modDependencies>
   <loadAfter>
     <li>Ludeon.RimWorld</li>
     <li>OskarPotocki.VanillaFactionsExpanded.Core</li>
-    <!--<li>jecrell.jecstools</li>-->
+    <li>jecrell.jecstools</li>
   </loadAfter>
 </ModMetaData>

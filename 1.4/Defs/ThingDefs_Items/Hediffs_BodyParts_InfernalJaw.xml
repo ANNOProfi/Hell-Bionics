@@ -4,7 +4,7 @@
 <Defs>
 
   <HediffDef ParentName="AddedBodyPartBase">
-    <defName>HB_InfernalJaw</defName>
+    <defName>InfernalJaw</defName>
     <label>infernal jaw</label>
     <labelNoun>a infernal jaw</labelNoun>
     <description>An installed infernal jaw.</description>
@@ -102,7 +102,7 @@ As this mask resembles the face of a demon, other people find it intimidating.</
     <description>Install a infernal jaw.</description>
     <descriptionHyperlinks>
       <ThingDef>HB_InfernalJaw</ThingDef>
-      <HediffDef>HB_InfernalJaw</HediffDef>
+      <HediffDef>InfernalJaw</HediffDef>
     </descriptionHyperlinks>
     <jobString>Installing infernal jaw.</jobString>
 		<workAmount>4000</workAmount>
@@ -135,6 +135,6 @@ As this mask resembles the face of a demon, other people find it intimidating.</
 		<appliedOnFixedBodyParts>
 			<li>Jaw</li>
 		</appliedOnFixedBodyParts>
-		<addsHediff>HB_InfernalJaw</addsHediff>
+		<addsHediff>InfernalJaw</addsHediff>
 	</RecipeDef>
 </Defs>

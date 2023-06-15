@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+    <RecipeDef Abstract="True" Name="HB_Surgery">
+        <effectWorking>Surgery</effectWorking>
+        <soundWorking>Recipe_Surgery</soundWorking>
+        <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+        <workSkill>Medicine</workSkill>
+        <workSkillLearnFactor>16</workSkillLearnFactor>
+        <surgerySuccessChanceFactor>50</surgerySuccessChanceFactor>
+    </RecipeDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase" Name="HB_InstallInfernal" Abstract="True">
+        <workerClass>HellBionics.Recipe_InstallInfernal</workerClass>
+    </RecipeDef>
+</Defs>

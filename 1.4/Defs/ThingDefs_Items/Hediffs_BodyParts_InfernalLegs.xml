@@ -2,7 +2,7 @@
 <Defs>
 
   <HediffDef ParentName="AddedBodyPartBase">
-    <defName>HB_InfernalLeg</defName>
+    <defName>InfernalLeg</defName>
     <label>infernal leg</label>
     <labelNoun>an infernal leg</labelNoun>
     <description>An installed infernal leg.</description>
@@ -35,7 +35,7 @@
             </li>
           </tools>
       </li>-->
-      <li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
+      <!--<li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
         <tools>
             <li>
               <label>infernal kick</label>
@@ -68,6 +68,7 @@
             <requireLineOfSight>true</requireLineOfSight>
             <flightEffecterDef>JumpFlightEffect</flightEffecterDef>
             <soundLanding>JumpPackLand</soundLanding>
+            <flyWithCarriedThing>true</flyWithCarriedThing>
             <targetParams>
               <canTargetLocations>true</canTargetLocations>
               <canTargetPawns>true</canTargetPawns>
@@ -93,8 +94,8 @@
               </li>
             </comps>
           </li>
-        </verbProps><!---->
-      </li>
+        </verbProps>
+      </li>-->
     </comps>
   </HediffDef>
 
@@ -121,13 +122,13 @@ This bionic is equipped with plasma jets, which enable the user to heat up their
     </statBases>
   </ThingDef>
 
-  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+  <RecipeDef ParentName="HB_InstallInfernal">
     <defName>HB_InstallInfernalLeg</defName>
     <label>install infernal leg</label>
     <description>Install an infernal leg.</description>
     <descriptionHyperlinks>
       <ThingDef>HB_InfernalLeg</ThingDef>
-      <HediffDef>HB_InfernalLeg</HediffDef>
+      <HediffDef>InfernalLeg</HediffDef>
     </descriptionHyperlinks>
     <jobString>Installing infernal leg.</jobString>
 		<workAmount>4000</workAmount>
@@ -160,6 +161,6 @@ This bionic is equipped with plasma jets, which enable the user to heat up their
 		<appliedOnFixedBodyParts>
 			<li>Leg</li>
 		</appliedOnFixedBodyParts>
-		<addsHediff>HB_InfernalLeg</addsHediff>
+		<addsHediff>InfernalLeg</addsHediff>
 	</RecipeDef>
 </Defs>
