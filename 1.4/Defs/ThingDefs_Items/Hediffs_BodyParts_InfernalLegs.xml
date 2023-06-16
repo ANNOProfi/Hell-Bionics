@@ -35,7 +35,7 @@
             </li>
           </tools>
       </li>-->
-      <!--<li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
+      <!----><li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
         <tools>
             <li>
               <label>infernal kick</label>
@@ -95,7 +95,7 @@
             </comps>
           </li>
         </verbProps>
-      </li>-->
+      </li>
     </comps>
   </HediffDef>
 
@@ -122,7 +122,7 @@ This bionic is equipped with plasma jets, which enable the user to heat up their
     </statBases>
   </ThingDef>
 
-  <RecipeDef ParentName="HB_InstallInfernal">
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
     <defName>HB_InstallInfernalLeg</defName>
     <label>install infernal leg</label>
     <description>Install an infernal leg.</description>

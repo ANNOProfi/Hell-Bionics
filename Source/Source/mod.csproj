@@ -20,7 +20,7 @@
 
  	<ItemGroup>
 	 	<!-- Mod -->
-	 	<Compile Include="..\**\*.cs" Exclude="obj\**\*" />
+	 	<Compile  Include="..\**\*.cs" Exclude="..\**\obj\**\*" />
 		
 	 	<!-- Rimworld -->
 	 	<Reference Include="../../../../RimWorldWin64_Data/Managed/*.dll">
