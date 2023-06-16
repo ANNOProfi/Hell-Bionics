@@ -27,7 +27,7 @@
 			<Private>False</Private>
 		</Reference>
 
-		<Reference Include="0JecsTools">
+		<!--<Reference Include="0JecsTools">
 			<HintPath>..\..\..\..\..\..\workshop\content\294100\932008009\1.4\Assemblies\0JecsTools.dll</HintPath>
 			<Private>False</Private>
 		</Reference>
@@ -35,6 +35,11 @@
 			<HintPath>..\..\..\..\..\..\workshop\content\294100\932008009\1.4\Assemblies\AbilityUser.dll</HintPath>
 			<Private>False</Private>
 		</Reference>
+
+		<Reference Include="MVCF">
+			<HintPath>..\..\..\..\..\..\workshop\content\294100\2023507013\1.4\Assemblies\*.dll</HintPath>
+			<Private>False</Private>
+		</Reference>-->
 
 		<!-- Harmony -->
 		<!-- <Reference Include="../../Harmony/v1.1/Assemblies/0Harmony.dll">
