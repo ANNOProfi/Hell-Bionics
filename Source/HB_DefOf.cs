@@ -1,6 +1,5 @@
 using RimWorld;
 using Verse;
-using System;
 
 namespace HellBionics
 {
@@ -8,11 +7,10 @@ namespace HellBionics
     public static class HB_ThingDefOf
     {
         static HB_ThingDefOf()
-		{
-			DefOfHelper.EnsureInitializedInCtor(typeof(ThingDefOf));
-		}
+        {
+            DefOfHelper.EnsureInitializedInCtor(typeof(ThingDefOf));
+        }
 
-        [MayRequireRoyalty]
-        public static ThingDef HB_PawnDasher;
+        [MayRequireRoyalty] public static ThingDef HB_PawnDasher;
     }
 }
