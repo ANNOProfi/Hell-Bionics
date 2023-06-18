@@ -1,118 +1,127 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
+
 <Defs>
 
-  <HediffDef ParentName="AddedBodyPartBase">
-    <defName>HB_HelldrillArm</defName>
-    <label>helldrill arm</label>
-    <labelNoun>a helldrill arm</labelNoun>
-    <description>An installed helldrill arm.</description>
-    <descriptionHyperlinks><ThingDef>HB_HelldrillArm</ThingDef></descriptionHyperlinks>
-    <spawnThingOnRemoved>HB_HelldrillArm</spawnThingOnRemoved>
-    <addedPartProps>
-      <partEfficiency>0.50</partEfficiency>
-      <solid>true</solid>
-	<betterThanNatural>true</betterThanNatural>
-    </addedPartProps>
-    <comps>
-      <li Class="HediffCompProperties_VerbGiver">
-        <tools>
-          <li>
-            <label>helldrill stab</label>
-            <capacities>
-              <li>Stab</li>
-            </capacities>
-            <power>30</power>
-            <cooldownTime>3</cooldownTime>
-            <armorPenetration>0.45</armorPenetration>
-            <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-            <extraMeleeDamages>
-                <li>
-                  <def>Burn</def>
-                  <amount>6</amount>
-                  <chance>1</chance>
-                </li>
-              </extraMeleeDamages>
-          </li>
-        </tools>
-      </li>
-    </comps>
-    <stages>
-      <li>
-        <statOffsets>
-          <MiningSpeed>0.60</MiningSpeed>
-        </statOffsets>
-      </li>
-    </stages>
-  </HediffDef>
+    <HediffDef ParentName="AddedBodyPartBase">
+        <defName>HB_HelldrillArm</defName>
+        <label>helldrill arm</label>
+        <labelNoun>a helldrill arm</labelNoun>
+        <description>An installed helldrill arm.</description>
+        <descriptionHyperlinks>
+            <ThingDef>HB_HelldrillArm</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>HB_HelldrillArm</spawnThingOnRemoved>
+        <addedPartProps>
+            <partEfficiency>0.50</partEfficiency>
+            <solid>true</solid>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+        <comps>
+            <li Class="HediffCompProperties_VerbGiver">
+                <tools>
+                    <li>
+                        <label>helldrill stab</label>
+                        <capacities>
+                            <li>Stab</li>
+                        </capacities>
+                        <power>30</power>
+                        <cooldownTime>3</cooldownTime>
+                        <armorPenetration>0.45</armorPenetration>
+                        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+                        <extraMeleeDamages>
+                            <li>
+                                <def>Burn</def>
+                                <amount>6</amount>
+                                <chance>1</chance>
+                            </li>
+                        </extraMeleeDamages>
+                    </li>
+                </tools>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <statOffsets>
+                    <MiningSpeed>0.60</MiningSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
 
-  <ThingDef ParentName="HB_BASE">
-    <defName>HB_HelldrillArm</defName>
-    <label>helldrill arm</label>
-    <description>An advanced arm replacement, upgraded with plasma sword technology. The hand and forearm can form a plasteel reinforced drill, which is coated in a layer of plasma.
+    <ThingDef ParentName="HB_BASE">
+        <defName>HB_HelldrillArm</defName>
+        <label>helldrill arm</label>
+        <description>
+            An advanced arm replacement, upgraded with plasma sword technology. The hand and forearm can form a plasteel reinforced drill, which is coated in a layer of plasma.
 
-As it is of the same line as the colloquially named hellsaw arm, this prosthetic is nicknamed the helldrill by miners.
+            As it is of the same line as the colloquially named hellsaw arm, this prosthetic is nicknamed the helldrill by miners.
 
-Designed to melt itself through even the hardest of materials, the helldrill gives an exceptional bonus to mining speed, at the obvious cost of finer manipulation, as it is quite unwieldy,
-even in it's regular hand configuration.</description>
-	  <graphicData>
-			<texPath>Things/Item/BodyPart/Helldrill_arm</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-    <descriptionHyperlinks><RecipeDef>HB_InstallHelldrillArm</RecipeDef></descriptionHyperlinks>
-    <costList>
-      <Plasteel>80</Plasteel>
-      <ComponentSpacer>6</ComponentSpacer>
-    </costList>
-    <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
-    <statBases>
-      <Mass>0.4</Mass>
-	    <MarketValue>1850</MarketValue>
-    </statBases>
-	    <techHediffsTags>
-      <li>Advanced</li>
-	<li>HB</li>
-    </techHediffsTags>
-  </ThingDef>
+            Designed to melt itself through even the hardest of materials, the helldrill gives an exceptional bonus to mining speed, at the obvious cost of finer manipulation, as it is quite unwieldy,
+            even in it's regular hand configuration.
+        </description>
+        <graphicData>
+            <texPath>Things/Item/BodyPart/Helldrill_arm</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <descriptionHyperlinks>
+            <RecipeDef>HB_InstallHelldrillArm</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Plasteel>80</Plasteel>
+            <ComponentSpacer>6</ComponentSpacer>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardMidFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <Mass>0.4</Mass>
+            <MarketValue>1850</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Advanced</li>
+            <li>HB</li>
+        </techHediffsTags>
+    </ThingDef>
 
-  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
-    <defName>HB_InstallHelldrillArm</defName>
-    <label>install helldrill arm</label>
-    <description>Install a helldrill arm.</description>
-    <descriptionHyperlinks>
-      <ThingDef>HB_HelldrillArm</ThingDef>
-      <HediffDef>HB_HelldrillArm</HediffDef>
-    </descriptionHyperlinks>
-    <jobString>Installing helldrill arm.</jobString>
-		<workAmount>4000</workAmount>
-		<ingredients>
-			<li>
-				<filter>
-					<categories>
-						<li>Medicine</li>
-					</categories>
-				</filter>
-				<count>1</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>HB_HelldrillArm</li>
-					</thingDefs>
-				</filter>
-				<count>1</count>
-			</li>
-		</ingredients>
-		<fixedIngredientFilter>
-			<categories>
-				<li>Medicine</li>
-			</categories>
-			<thingDefs>
-				<li>HB_HelldrillArm</li>
-			</thingDefs>
-		</fixedIngredientFilter>
-		<appliedOnFixedBodyParts>
-			<li>Shoulder</li>
-		</appliedOnFixedBodyParts>
-		<addsHediff>HB_HelldrillArm</addsHediff>
-	</RecipeDef>
+    <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+        <defName>HB_InstallHelldrillArm</defName>
+        <label>install helldrill arm</label>
+        <description>Install a helldrill arm.</description>
+        <descriptionHyperlinks>
+            <ThingDef>HB_HelldrillArm</ThingDef>
+            <HediffDef>HB_HelldrillArm</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Installing helldrill arm.</jobString>
+        <workAmount>4000</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>Medicine</li>
+                    </categories>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>HB_HelldrillArm</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <categories>
+                <li>Medicine</li>
+            </categories>
+            <thingDefs>
+                <li>HB_HelldrillArm</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Shoulder</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>HB_HelldrillArm</addsHediff>
+    </RecipeDef>
 </Defs>

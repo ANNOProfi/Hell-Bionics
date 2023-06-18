@@ -1,71 +1,70 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
-
 <Defs>
 
-<ThingDef Name="HBBodyPartModBase" Abstract="True">
-    <thingClass>ThingWithComps</thingClass>
-    <category>Item</category>
-    <useHitPoints>true</useHitPoints>
-    <selectable>true</selectable>
-    <graphicData>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>1.4</drawSize>
-    </graphicData>
-    <statBases>
-      <MaxHitPoints>50</MaxHitPoints>
-      <Flammability>0.2</Flammability>
-			<Beauty>0</Beauty>
-			<DeteriorationRate>2.0</DeteriorationRate>
-			<Mass>1</Mass>
-		</statBases>
-    <altitudeLayer>Item</altitudeLayer>
-    <tickerType>Never</tickerType>
-    <alwaysHaulable>true</alwaysHaulable>
-    <isTechHediff>true</isTechHediff>
-    <tradeTags>
-      <li>TechHediff</li>
-    </tradeTags>
-    <comps>
-      <li Class="CompProperties_Forbiddable"/>
-    </comps>
-    <pathCost>10</pathCost>	
-  </ThingDef>
+    <ThingDef Name="HBBodyPartModBase" Abstract="True">
+        <thingClass>ThingWithComps</thingClass>
+        <category>Item</category>
+        <useHitPoints>true</useHitPoints>
+        <selectable>true</selectable>
+        <graphicData>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.4</drawSize>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>50</MaxHitPoints>
+            <Flammability>0.2</Flammability>
+            <Beauty>0</Beauty>
+            <DeteriorationRate>2.0</DeteriorationRate>
+            <Mass>1</Mass>
+        </statBases>
+        <altitudeLayer>Item</altitudeLayer>
+        <tickerType>Never</tickerType>
+        <alwaysHaulable>true</alwaysHaulable>
+        <isTechHediff>true</isTechHediff>
+        <tradeTags>
+            <li>TechHediff</li>
+        </tradeTags>
+        <comps>
+            <li Class="CompProperties_Forbiddable" />
+        </comps>
+        <pathCost>10</pathCost>
+    </ThingDef>
 
-  <ThingDef Name="HB_BASE" ParentName="HBBodyPartModBase" Abstract="True">
-    <techLevel>Spacer</techLevel>
-		<tradeTags>
-			<li>Bionic</li>
-		</tradeTags>
-		<thingCategories>
-			<li>BodyPartsBionic</li>
-		</thingCategories>
-    <statBases>
-      <WorkToMake>32000</WorkToMake>
-    </statBases>
-    <recipeMaker>
-      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-      <workSkill>Crafting</workSkill>
-      <effectWorking>Smith</effectWorking>
-      <soundWorking>Recipe_Smith</soundWorking>
-      <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
-      <skillRequirements>
-        <Crafting>10</Crafting>
-      </skillRequirements>
-      <recipeUsers>
-        <li>FabricationBench</li>
-      </recipeUsers>
-    </recipeMaker>
-  </ThingDef>
+    <ThingDef Name="HB_BASE" ParentName="HBBodyPartModBase" Abstract="True">
+        <techLevel>Spacer</techLevel>
+        <tradeTags>
+            <li>Bionic</li>
+        </tradeTags>
+        <thingCategories>
+            <li>BodyPartsBionic</li>
+        </thingCategories>
+        <statBases>
+            <WorkToMake>32000</WorkToMake>
+        </statBases>
+        <recipeMaker>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>10</Crafting>
+            </skillRequirements>
+            <recipeUsers>
+                <li>FabricationBench</li>
+            </recipeUsers>
+        </recipeMaker>
+    </ThingDef>
 
-  <MVCF.ModDef>
-    <defName>HB_HellBionics</defName>
-    <label>Hell Bionics</label>
-    <description>Infernal Leg jump</description>
-    <ActivateFeatures>
-      <li>HediffVerbs</li>
-      <li>IntegratedToggle</li>
-    </ActivateFeatures>
-  </MVCF.ModDef>
+    <MVCF.ModDef>
+        <defName>HB_HellBionics</defName>
+        <label>Hell Bionics</label>
+        <description>Infernal Leg jump</description>
+        <ActivateFeatures>
+            <li>HediffVerbs</li>
+            <li>IntegratedToggle</li>
+        </ActivateFeatures>
+    </MVCF.ModDef>
 
 </Defs>
