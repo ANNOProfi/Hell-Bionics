@@ -57,15 +57,4 @@
       </recipeUsers>
     </recipeMaker>
   </ThingDef>
-
-  <MVCF.ModDef>
-    <defName>HB_HellBionics</defName>
-    <label>Hell Bionics</label>
-    <description>Infernal Leg jump</description>
-    <ActivateFeatures>
-      <li>HediffVerbs</li>
-      <li>IntegratedToggle</li>
-    </ActivateFeatures>
-  </MVCF.ModDef>
-
 </Defs>

@@ -16,46 +16,14 @@
 	    <betterThanNatural>true</betterThanNatural>
     </addedPartProps>
     <comps>
-      <li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
-        <verbs>
-          <li>
-            <verbClass>Verb_SpewFire</verbClass>
-            <label>spew fire</label>
-            <violent>true</violent>
-            <hasStandardCommand>true</hasStandardCommand>
-            <onlyManualCast>True</onlyManualCast>
-            <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
-            <warmupTime>0.2</warmupTime>
-            <!--<warmupEffecter>JumpWarmupEffect</warmupEffecter>
-            <requireLineOfSight>true</requireLineOfSight>
-            <flightEffecterDef>JumpFlightEffect</flightEffecterDef>
-            <soundLanding>JumpPackLand</soundLanding>-->
-            <targetParams>
-              <canTargetLocations>true</canTargetLocations>
-              <canTargetPawns>true</canTargetPawns>
-              <canTargetBuildings>false</canTargetBuildings>
-              <canTargetSelf>false</canTargetSelf>
-            </targetParams>
-            <range>10</range>
-          </li>
-        </verbs>
-        <verbProps>
-          <li>
-            <label>spew fire</label>
-            <visualLabel>infernal breath</visualLabel>
-            <graphic>
-              <texPath>UI/Abilities/FireSpew</texPath>
-              <graphicClass>Graphic_Single</graphicClass>
-            </graphic>
-            <brawlerCaresAbout>false</brawlerCaresAbout>
-            <comps>
-              <li Class="MVCF.VerbComps.VerbCompProperties_Cooldown">
-                <compClass>MVCF.VerbComps.VerbComp_Cooldown</compClass>
-                <cooldownTime>20</cooldownTime>
-              </li>
-            </comps>
-          </li>
-        </verbProps>
+      <li Class="AthenaFramework.HediffCompProperties_GiveSingularAbility">
+        <abilityDefs>
+          <li>HB_InfernalBreath</li>
+        </abilityDefs> 
+      </li>
+      <li Class="HellBionics.HediffCompProperties_Plasma">
+        <amountPerTick>0.01</amountPerTick>
+        <maximumBase>10</maximumBase>
       </li>
     </comps>
     <stages>
