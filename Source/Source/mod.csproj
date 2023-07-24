@@ -15,7 +15,7 @@
 
 		<DebugSymbols>false</DebugSymbols>
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-		<LangVersion>8.0</LangVersion>
+		<LangVersion>Latest</LangVersion>
 	</PropertyGroup>
 
  	<ItemGroup>
@@ -23,7 +23,12 @@
 	 	<Compile  Include="..\**\*.cs" Exclude="..\**\obj\**\*" />
 		
 	 	<!-- Rimworld -->
-	 	<Reference Include="../../../../RimWorldWin64_Data/Managed/*.dll">
+	 	<Reference Include="../../../../RimWorldWin64_Data/Managed/*.dll" Condition="Exists('../../../../RimWorldWin64_Data')">
+			<Private>False</Private>
+		</Reference>
+
+		<Reference Include="AthenaFramework">
+			<HintPath>..\..\..\..\..\..\workshop\content\294100\2903359518\1.4\Assemblies\AthenaFramework.dll</HintPath>
 			<Private>False</Private>
 		</Reference>
 
@@ -37,13 +42,23 @@
 		</Reference>
 
 		<Reference Include="MVCF">
-			<HintPath>..\..\..\..\..\..\workshop\content\294100\2023507013\1.4\Assemblies\*.dll</HintPath>
+			<HintPath>..\..\..\..\..\..\workshop\content\294100\2023507013\1.4\Assemblies\MVCF.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+
+		<Reference Include="VFECore">
+			<HintPath>..\..\..\..\..\..\workshop\content\294100\2023507013\1.4\Assemblies\VFECore.dll</HintPath>
 			<Private>False</Private>
 		</Reference>-->
 
 		<!-- Harmony -->
-		<!-- <Reference Include="../../Harmony/v1.1/Assemblies/0Harmony.dll">
+		<!-- --> <Reference Include="..\..\..\..\..\..\workshop\content\294100\2009463077\Current\Assemblies\*.dll">
 			<Private>False</Private>
-		</Reference> -->
+		</Reference>
+
+		<!-- Other Files -->
+		<None Include="../../1.4/Defs/**" LinkBase="Defs" />
+		<None Include="../../1.4/Assemblies/**" LinkBase="Assemblies" />
+		<None Include="../../Textures/**" LinkBase="Textures" />
 	</ItemGroup>
 </Project>
