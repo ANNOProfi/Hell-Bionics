@@ -1,31 +1,13 @@
+using System;
+using UnityEngine;
 using Verse;
 using RimWorld;
-using UnityEngine;
 
 namespace HellBionics
 {
-    public class Verb_InfernalDash : Verb_Jump
+    public class Verb_CastAbilityInfernalDash : Verb_CastAbility
     {
-        private float cachedEffectiveRange = -1f;
-
-        protected override float EffectiveRange
-		{
-			get
-			{
-				if (this.cachedEffectiveRange < 0f)
-				{
-					if (base.EquipmentSource != null)
-					{
-						this.cachedEffectiveRange = base.EquipmentSource.GetStatValue(StatDefOf.JumpRange, true, -1);
-					}
-					else
-					{
-						this.cachedEffectiveRange = this.verbProps.range;
-					}
-				}
-				return this.cachedEffectiveRange;
-			}
-		}
+        //private float cachedEffectiveRange = -1f;
 
         public override bool MultiSelect
 		{
@@ -34,13 +16,39 @@ namespace HellBionics
 				return true;
 			}
 		}
-		
+
+		private HediffComp_InfernalUtility infernalUtility
+		{
+			get
+			{
+				return this.CasterPawn.health.hediffSet.GetFirstHediffOfDef(HB_DefOf.HB_InfernalUtility).TryGetComp<HediffComp_InfernalUtility>();
+			}
+		}
+
+        protected override float EffectiveRange
+		{
+			get
+			{
+	
+				return infernalUtility.InfernalDashRange;
+				
+			}
+		}
 
         protected override bool TryCastShot()
-        {
-			Log.Message("Infernal_Dash called");
-            return HellBionics.JumpUtility.DoJump(this.CasterPawn, this.currentTarget, base.ReloadableCompSource, this.verbProps);
-        }
+		{
+			return base.TryCastShot() && JumpUtility.DoJump(this.CasterPawn, this.currentTarget, base.ReloadableCompSource, this.verbProps);
+		}
+
+        public override void OnGUI(LocalTargetInfo target)
+		{
+			if (this.CanHitTarget(target) && JumpUtility.ValidJumpTarget(this.caster.Map, target.Cell))
+			{
+				base.OnGUI(target);
+				return;
+			}
+			GenUI.DrawMouseAttachment(TexCommand.CannotShoot);
+		}
 
         public override void OrderForceTarget(LocalTargetInfo target)
 		{
@@ -55,16 +63,6 @@ namespace HellBionics
         public override bool CanHitTargetFrom(IntVec3 root, LocalTargetInfo targ)
 		{
 			return JumpUtility.CanHitTargetFrom(this.CasterPawn, root, targ, this.EffectiveRange);
-		}
-
-        public override void OnGUI(LocalTargetInfo target)
-		{
-			if (this.CanHitTarget(target) && JumpUtility.ValidJumpTarget(this.caster.Map, target.Cell))
-			{
-				base.OnGUI(target);
-				return;
-			}
-			GenUI.DrawMouseAttachment(TexCommand.CannotShoot);
 		}
 
         public override void DrawHighlight(LocalTargetInfo target)

@@ -4,7 +4,7 @@
 <Defs>
 
   <HediffDef ParentName="AddedBodyPartBase">
-    <defName>InfernalJaw</defName>
+    <defName>HB_InfernalJaw</defName>
     <label>infernal jaw</label>
     <labelNoun>a infernal jaw</labelNoun>
     <description>An installed infernal jaw.</description>
@@ -16,46 +16,14 @@
 	    <betterThanNatural>true</betterThanNatural>
     </addedPartProps>
     <comps>
-      <li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
-        <verbs>
-          <li>
-            <verbClass>Verb_SpewFire</verbClass>
-            <label>spew fire</label>
-            <violent>true</violent>
-            <hasStandardCommand>true</hasStandardCommand>
-            <onlyManualCast>True</onlyManualCast>
-            <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
-            <warmupTime>0.2</warmupTime>
-            <!--<warmupEffecter>JumpWarmupEffect</warmupEffecter>
-            <requireLineOfSight>true</requireLineOfSight>
-            <flightEffecterDef>JumpFlightEffect</flightEffecterDef>
-            <soundLanding>JumpPackLand</soundLanding>-->
-            <targetParams>
-              <canTargetLocations>true</canTargetLocations>
-              <canTargetPawns>true</canTargetPawns>
-              <canTargetBuildings>false</canTargetBuildings>
-              <canTargetSelf>false</canTargetSelf>
-            </targetParams>
-            <range>10</range>
-          </li>
-        </verbs>
-        <verbProps>
-          <li>
-            <label>spew fire</label>
-            <visualLabel>infernal breath</visualLabel>
-            <graphic>
-              <texPath>UI/Abilities/FireSpew</texPath>
-              <graphicClass>Graphic_Single</graphicClass>
-            </graphic>
-            <brawlerCaresAbout>false</brawlerCaresAbout>
-            <comps>
-              <li Class="MVCF.VerbComps.VerbCompProperties_Cooldown">
-                <compClass>MVCF.VerbComps.VerbComp_Cooldown</compClass>
-                <cooldownTime>20</cooldownTime>
-              </li>
-            </comps>
-          </li>
-        </verbProps>
+      <li Class="AthenaFramework.HediffCompProperties_GiveSingularAbility">
+        <abilityDefs>
+          <li>HB_InfernalBreath</li>
+        </abilityDefs> 
+      </li>
+      <li Class="HellBionics.HediffCompProperties_Plasma">
+        <amountPerTick>0.01</amountPerTick>
+        <maximumBase>10</maximumBase>
       </li>
     </comps>
     <stages>
@@ -102,7 +70,7 @@ As this mask resembles the face of a demon, other people find it intimidating.</
     <description>Install a infernal jaw.</description>
     <descriptionHyperlinks>
       <ThingDef>HB_InfernalJaw</ThingDef>
-      <HediffDef>InfernalJaw</HediffDef>
+      <HediffDef>HB_InfernalJaw</HediffDef>
     </descriptionHyperlinks>
     <jobString>Installing infernal jaw.</jobString>
 		<workAmount>4000</workAmount>
@@ -135,6 +103,6 @@ As this mask resembles the face of a demon, other people find it intimidating.</
 		<appliedOnFixedBodyParts>
 			<li>Jaw</li>
 		</appliedOnFixedBodyParts>
-		<addsHediff>InfernalJaw</addsHediff>
+		<addsHediff>HB_InfernalJaw</addsHediff>
 	</RecipeDef>
 </Defs>

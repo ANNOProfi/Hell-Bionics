@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+    <AbilityDef>
+        <defName>HB_InfernalDash</defName>
+        <label>infernal dash</label>
+        <description>bla</description>
+        <iconPath>UI/Abilities/Infernal_dash</iconPath>
+        <cooldownTicksRange>200</cooldownTicksRange>
+        <aiCanUse>true</aiCanUse>
+        <verbProperties>
+            <verbClass>HellBionics.Verb_CastAbilityInfernalDash</verbClass>
+            <warmupTime>0.5</warmupTime>
+            <warmupEffecter>JumpWarmupEffect</warmupEffecter>
+            <requireLineOfSight>true</requireLineOfSight>
+            <flightEffecterDef>HB_InfernalDashEffect</flightEffecterDef>
+            <soundLanding>JumpPackLand</soundLanding>
+            <flyWithCarriedThing>true</flyWithCarriedThing>
+            <targetParams>
+                <canTargetLocations>true</canTargetLocations>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetSelf>false</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <!--<li Class="AthenaFramework.CompProperties_AbilitySingularTracker"/>-->
+            <li Class="HellBionics.CompProperties_AbilityInfernalDash">
+                <range>10</range>
+                <plasmaCost>10</plasmaCost>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>HB_InfernalBreath</defName>
+        <label>infernal breath</label>
+        <description>bla</description>
+        <iconPath>UI/Abilities/Infernal_breath</iconPath>
+        <cooldownTicksRange>200</cooldownTicksRange>
+        <aiCanUse>true</aiCanUse>
+        <warmupStartSound>HB_InfernalBreath_Warmup</warmupStartSound>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <range>7.9</range>
+            <warmupTime>1</warmupTime>
+            <soundCast>HB_InfernalBreath_Resolve</soundCast>
+            <targetParams>
+                <canTargetLocations>true</canTargetLocations>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="HellBionics.CompProperties_AbilityInfernalBreath">
+                <range>7.9</range>
+                <lineWidthEnd>5</lineWidthEnd>
+                <plasmaCost>10</plasmaCost>
+            </li>
+            <!--<li Class="AthenaFramework.CompProperties_AbilitySingularTracker"/>-->
+        </comps>
+    </AbilityDef>
+</Defs>

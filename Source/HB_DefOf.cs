@@ -1,18 +1,29 @@
 using RimWorld;
 using Verse;
-using System;
+//using VFECore.Abilities;
+using AthenaFramework;
 
 namespace HellBionics
 {
     [DefOf]
-    public static class HB_ThingDefOf
+    public static class HB_DefOf
     {
-        static HB_ThingDefOf()
+        static HB_DefOf()
 		{
-			DefOfHelper.EnsureInitializedInCtor(typeof(ThingDefOf));
+			DefOfHelper.EnsureInitializedInCtor(typeof(HB_DefOf));
 		}
 
-        [MayRequireRoyalty]
+        //[MayRequireRoyalty]
         public static ThingDef HB_PawnDasher;
+
+        //public static HediffDef InfernalLeg;
+
+        //public static HediffDef InfernalJaw;
+
+        public static HediffDef HB_InfernalUtility;
+
+        //public static ThingDef AbilityStraightPawnFlyer;
+
+        //public static VFECore.Abilities.AbilityDef HB_InfernalDash;
     }
 }

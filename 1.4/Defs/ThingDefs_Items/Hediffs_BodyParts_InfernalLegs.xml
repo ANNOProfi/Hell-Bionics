@@ -2,7 +2,7 @@
 <Defs>
 
   <HediffDef ParentName="AddedBodyPartBase">
-    <defName>InfernalLeg</defName>
+    <defName>HB_InfernalLeg</defName>
     <label>infernal leg</label>
     <labelNoun>an infernal leg</labelNoun>
     <description>An installed infernal leg.</description>
@@ -14,87 +14,35 @@
       <betterThanNatural>true</betterThanNatural>
     </addedPartProps>
     <comps>
-      <!-- <li Class="HediffCompProperties_VerbGiver">
-          <tools>
-            <li>
-              <label>infernal kick</label>
-              <capacities>
-                <li>Blunt</li>
-              </capacities>
-              <power>30</power>
-              <cooldownTime>3</cooldownTime>
-              <armorPenetration>0.45</armorPenetration>
-              <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-              <extraMeleeDamages>
-                  <li>
-                    <def>Burn</def>
-                    <amount>6</amount>
-                    <chance>1</chance>
-                  </li>
-                </extraMeleeDamages>
-            </li>
-          </tools>
-      </li>-->
-      <!----><li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
+      <li Class="HediffCompProperties_VerbGiver">
         <tools>
-            <li>
-              <label>infernal kick</label>
-              <capacities>
-                <li>Blunt</li>
-              </capacities>
-              <power>30</power>
-              <cooldownTime>3</cooldownTime>
-              <armorPenetration>0.45</armorPenetration>
-              <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-              <extraMeleeDamages>
-                  <li>
-                    <def>Burn</def>
-                    <amount>6</amount>
-                    <chance>100</chance>
-                  </li>
-                </extraMeleeDamages>
-            </li>
-        </tools>
-        <verbs>
           <li>
-            <verbClass>HellBionics.Verb_InfernalDash</verbClass>
-            <label>jump</label>
-            <violent>false</violent>
-            <hasStandardCommand>true</hasStandardCommand>
-            <onlyManualCast>True</onlyManualCast>
-            <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
-            <warmupTime>0.5</warmupTime>
-            <warmupEffecter>JumpWarmupEffect</warmupEffecter>
-            <requireLineOfSight>true</requireLineOfSight>
-            <flightEffecterDef>JumpFlightEffect</flightEffecterDef>
-            <soundLanding>JumpPackLand</soundLanding>
-            <flyWithCarriedThing>true</flyWithCarriedThing>
-            <targetParams>
-              <canTargetLocations>true</canTargetLocations>
-              <canTargetPawns>true</canTargetPawns>
-              <canTargetBuildings>false</canTargetBuildings>
-              <canTargetSelf>false</canTargetSelf>
-            </targetParams>
-            <range>10</range>
-          </li>
-        </verbs>
-        <verbProps>
-          <li>
-            <label>jump</label>
-            <visualLabel>infernal dash</visualLabel>
-            <graphic>
-              <texPath>Things/Pawn/Humanlike/Apparel/JumpPack/JumpPack</texPath>
-              <graphicClass>Graphic_Single</graphicClass>
-            </graphic>
-            <brawlerCaresAbout>false</brawlerCaresAbout>
-            <comps>
-              <li Class="MVCF.VerbComps.VerbCompProperties_Cooldown">
-                <compClass>MVCF.VerbComps.VerbComp_Cooldown</compClass>
-                <cooldownTime>20</cooldownTime>
+            <label>infernal kick</label>
+            <capacities>
+              <li>Blunt</li>
+            </capacities>
+            <power>30</power>
+            <cooldownTime>3</cooldownTime>
+            <armorPenetration>0.45</armorPenetration>
+            <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+            <extraMeleeDamages>
+              <li>
+                <def>Burn</def>
+                <amount>6</amount>
+                <chance>100</chance>
               </li>
-            </comps>
+            </extraMeleeDamages>
           </li>
-        </verbProps>
+        </tools>
+      </li>
+      <li Class="AthenaFramework.HediffCompProperties_GiveSingularAbility">
+        <abilityDefs>
+          <li>HB_InfernalDash</li>
+        </abilityDefs> 
+      </li>
+      <li Class="HellBionics.HediffCompProperties_Plasma">
+        <amountPerTick>0.01</amountPerTick>
+        <maximumBase>10</maximumBase>
       </li>
     </comps>
   </HediffDef>
@@ -128,7 +76,7 @@ This bionic is equipped with plasma jets, which enable the user to heat up their
     <description>Install an infernal leg.</description>
     <descriptionHyperlinks>
       <ThingDef>HB_InfernalLeg</ThingDef>
-      <HediffDef>InfernalLeg</HediffDef>
+      <HediffDef>HB_InfernalLeg</HediffDef>
     </descriptionHyperlinks>
     <jobString>Installing infernal leg.</jobString>
 		<workAmount>4000</workAmount>
@@ -161,6 +109,6 @@ This bionic is equipped with plasma jets, which enable the user to heat up their
 		<appliedOnFixedBodyParts>
 			<li>Leg</li>
 		</appliedOnFixedBodyParts>
-		<addsHediff>InfernalLeg</addsHediff>
+		<addsHediff>HB_InfernalLeg</addsHediff>
 	</RecipeDef>
 </Defs>
