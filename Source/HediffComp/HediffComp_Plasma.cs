@@ -4,8 +4,6 @@ namespace HellBionics
 {
     public class HediffComp_Plasma : HediffComp
     {
-        private bool initialized = false;
-
         public HediffCompProperties_Plasma Props
         {
             get
@@ -30,31 +28,22 @@ namespace HellBionics
 			}
 		}
 
-        private void Initialize()
+        public override void CompPostPostAdd(DamageInfo? dinfo)
         {
             if(pawn.health.hediffSet.GetFirstHediffOfDef(HB_DefOf.HB_InfernalUtility) == null)
             {
                 pawn.health.AddHediff(HB_DefOf.HB_InfernalUtility);
             }
-            infernalUtility.UpdateValues(this.Props.maximumBase);
-            this.initialized = true;
-        }
-
-        public override void CompPostTick(ref float severityAdjustment)
-        {
-            if(!this.initialized)
-            {
-                Initialize();
-            }
-            if(infernalUtility.RemainingPlasma < infernalUtility.MaximumPlasma)
-            {
-                infernalUtility.OffsetPlasma(this.Props.amountPerTick);
-            }  
+            infernalUtility.UpdateValues(this.Props.maximumBase, this.Props.plasmaPerTick);
         }
 
         public override void CompPostPostRemoved()
         {
-            infernalUtility.UpdateValues(-this.Props.maximumBase);
+            infernalUtility.UpdateValues(-this.Props.maximumBase, -this.Props.plasmaPerTick);
+            if(infernalUtility.MaximumPlasma == 0)
+            {
+                pawn.health.RemoveHediff(pawn.health.hediffSet.GetFirstHediffOfDef(HB_DefOf.HB_InfernalUtility));
+            }
         }
     }
 }

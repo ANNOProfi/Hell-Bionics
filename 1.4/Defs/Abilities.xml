@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-    <AbilityDef>
+    <AbilityDef MayRequire="Ludeon.Royalty">
         <defName>HB_InfernalDash</defName>
         <label>infernal dash</label>
-        <description>bla</description>
+        <description>Infernal Mechanites release their stored plasma through a series of jet nozzles, propelling the user forward and leaving a fiery trail.</description>
         <iconPath>UI/Abilities/Infernal_dash</iconPath>
         <cooldownTicksRange>200</cooldownTicksRange>
         <aiCanUse>true</aiCanUse>
@@ -24,7 +24,6 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <!--<li Class="AthenaFramework.CompProperties_AbilitySingularTracker"/>-->
             <li Class="HellBionics.CompProperties_AbilityInfernalDash">
                 <range>10</range>
                 <plasmaCost>10</plasmaCost>
@@ -32,17 +31,17 @@
         </comps>
     </AbilityDef>
 
-    <AbilityDef>
+    <AbilityDef MayRequire="Ludeon.Biotech">
         <defName>HB_InfernalBreath</defName>
         <label>infernal breath</label>
-        <description>bla</description>
+        <description>Infernal mechanites accumulate their stored plasma in the mouth of the user, expelling it in a fiery blast.</description>
         <iconPath>UI/Abilities/Infernal_breath</iconPath>
         <cooldownTicksRange>200</cooldownTicksRange>
         <aiCanUse>true</aiCanUse>
         <warmupStartSound>HB_InfernalBreath_Warmup</warmupStartSound>
         <verbProperties>
             <verbClass>Verb_CastAbility</verbClass>
-            <range>7.9</range>
+            <range>8.5</range>
             <warmupTime>1</warmupTime>
             <soundCast>HB_InfernalBreath_Resolve</soundCast>
             <targetParams>
@@ -51,11 +50,37 @@
         </verbProperties>
         <comps>
             <li Class="HellBionics.CompProperties_AbilityInfernalBreath">
-                <range>7.9</range>
+                <range>8.5</range>
                 <lineWidthEnd>5</lineWidthEnd>
-                <plasmaCost>10</plasmaCost>
+                <plasmaCost>5</plasmaCost>
             </li>
-            <!--<li Class="AthenaFramework.CompProperties_AbilitySingularTracker"/>-->
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>HB_HellCannonShot</defName>
+        <label>hell cannon shot</label>
+        <description>Infernal mechanites fuel the firing mechanisms of the hell cannon, producing a highly explosive plasma shot.</description>
+        <iconPath>UI/Abilities/Hell_cannon_shot</iconPath>
+        <cooldownTicksRange>200</cooldownTicksRange>
+        <aiCanUse>true</aiCanUse>
+        <!--<warmupStartSound>HB_InfernalBreath_Warmup</warmupStartSound>-->
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <range>15</range>
+            <warmupTime>1</warmupTime>
+            <soundCast>InfernoCannon_Fire</soundCast>
+            <soundCastTail>GunTail_Light</soundCastTail>
+            <targetParams>
+                <canTargetLocations>true</canTargetLocations>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="HellBionics.CompProperties_AbilityCannonShot">
+                <projectileDef>Bullet_HellCannon</projectileDef>
+                <plasmaCost>15</plasmaCost>
+                <burstCount>1</burstCount>
+            </li>
         </comps>
     </AbilityDef>
 </Defs>

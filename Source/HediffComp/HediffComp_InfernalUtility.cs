@@ -25,15 +25,21 @@ namespace HellBionics
 
         public float InfernalDashRange { get => infernalDashRange; set => infernalDashRange = value; }
 
+        public float PlasmaPerTick { get => plasmaPerTick; set => plasmaPerTick = value; }
+
         private float maximumPlasma = 0f;
 
         private float remainingPlasma = 0f;
 
+        private float plasmaPerTick = 0f;
+
         private float infernalDashRange = 10f;
 
-        public void UpdateValues(float maximum)
+        public void UpdateValues(float maximum, float plasmaPerTick)
         {
             MaximumPlasma += maximum;
+            PlasmaPerTick += plasmaPerTick;
+
             if(RemainingPlasma > MaximumPlasma)
             {
                 RemainingPlasma = MaximumPlasma;
@@ -42,14 +48,34 @@ namespace HellBionics
 
         public void OffsetPlasma(float amountPerTick)
         {
-            if((RemainingPlasma + amountPerTick) <= MaximumPlasma)
+            if((RemainingPlasma + amountPerTick) < 0f)
             {
-                RemainingPlasma += amountPerTick;
+                RemainingPlasma = 0f;
             }
             else if((RemainingPlasma + amountPerTick) >= MaximumPlasma)
             {
                 RemainingPlasma = MaximumPlasma;
             }
+            else if((RemainingPlasma + amountPerTick) <= MaximumPlasma)
+            {
+                RemainingPlasma += amountPerTick;
+            }
+        }
+
+        public override void CompPostTick(ref float severityAdjustment)
+        {
+            if(RemainingPlasma < MaximumPlasma)
+            {
+                OffsetPlasma(PlasmaPerTick);
+            }  
+        }
+
+        public override void CompExposeData()
+        {
+            Scribe_Values.Look(ref remainingPlasma, "remainingPlasma");
+            Scribe_Values.Look(ref maximumPlasma, "maximumPlasma");
+            Scribe_Values.Look(ref plasmaPerTick, "plasmaPerTick");
+            Scribe_Values.Look(ref infernalDashRange, "infernalDashRange");
         }
     }
 }

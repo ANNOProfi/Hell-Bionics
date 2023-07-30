@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <EffecterDef>
+    <EffecterDef MayRequire="Ludeon.Royalty">
         <defName>HB_InfernalDashEffect</defName>
         <children>
           <li>
