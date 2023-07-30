@@ -8,6 +8,7 @@
     <description>An installed infernal leg.</description>
     <descriptionHyperlinks><ThingDef>HB_InfernalLeg</ThingDef></descriptionHyperlinks>
     <spawnThingOnRemoved>HB_InfernalLeg</spawnThingOnRemoved>
+    <defaultLabelColor>(1.0, 0.5, 0)</defaultLabelColor>
     <addedPartProps>
       <solid>true</solid>
       <partEfficiency>1.50</partEfficiency>
@@ -35,13 +36,13 @@
           </li>
         </tools>
       </li>
-      <li Class="AthenaFramework.HediffCompProperties_GiveSingularAbility">
+      <li Class="AthenaFramework.HediffCompProperties_GiveSingularAbility" MayRequire="Ludeon.Royalty">
         <abilityDefs>
           <li>HB_InfernalDash</li>
         </abilityDefs> 
       </li>
       <li Class="HellBionics.HediffCompProperties_Plasma">
-        <amountPerTick>0.01</amountPerTick>
+        <plasmaPerTick>0.01</plasmaPerTick>
         <maximumBase>10</maximumBase>
       </li>
     </comps>
@@ -50,9 +51,11 @@
   <ThingDef ParentName="HB_BASE">
     <defName>HB_InfernalLeg</defName>
     <label>infernal leg</label>
-    <description>A prosthetic leg in the shape of goat's leg. Because of this, the user will become slightly faster than a normal human
+    <description>A bionic leg, that has been changed by long exposure to infernal mechanites.
 
-This bionic is equipped with plasma jets, which enable the user to heat up their hooves for extra damage and to propel themselves over short distances.</description>
+The transformation process has changed this leg from that of a human, to a digitigrade one, resembling that of a goat, increasing the user's speed.
+
+Additionally, the infernal mechanites contained within can use their stored plasma to propel the user forward, leaving a burning path in their wake.</description>
     <graphicData>
 			<texPath>Things/Item/BodyPart/Infernal_leg</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -63,11 +66,18 @@ This bionic is equipped with plasma jets, which enable the user to heat up their
       <ComponentSpacer>6</ComponentSpacer>
     </costList>
 	  <tickerType>Normal</tickerType>
-    <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
     <statBases>
       <Mass>8</Mass>
 	    <MarketValue>2000</MarketValue>
     </statBases>
+    <techHediffsTags>
+      <li>Advanced</li>
+	<li>HB</li>
+    </techHediffsTags>
+    <researchPrerequisites>
+      <li>InfernalBionics</li>
+  </researchPrerequisites>
   </ThingDef>
 
   <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">

@@ -2,8 +2,8 @@
 <Defs>
     <HediffDef>
         <defName>HB_InfernalUtility</defName>
-        <label>infernal utility</label>
-        <description>Support hediff for the HellBionics ability structure</description>
+        <label>infernal mechanites</label>
+        <description>This pawn is carrying a hive of mechanites, that allow them to accumulate air and other substances into somehow safely storable plasma.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <isBad>false</isBad>
         <defaultLabelColor>(1.0, 0.5, 0)</defaultLabelColor>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<Defs>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>HB_InfernalArm</defName>
+    <label>infernal arm</label>
+    <labelNoun>an infernal arm</labelNoun>
+    <description>An installed infernal arm.</description>
+    <descriptionHyperlinks><ThingDef>HB_InfernalArm</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>HB_InfernalArm</spawnThingOnRemoved>
+    <defaultLabelColor>(1.0, 0.5, 0)</defaultLabelColor>
+    <addedPartProps>
+	    <partEfficiency>1.30</partEfficiency>
+      <solid>true</solid>
+	  <isGoodWeapon>true</isGoodWeapon>
+	  <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+			 <comps>
+         <li Class="HediffCompProperties_VerbGiver">
+          <tools>
+            <li>
+              <label>infernal fist</label>
+              <capacities>
+                <li>Blunt</li>
+              </capacities>
+              <power>10</power>
+              <cooldownTime>1</cooldownTime>
+              <armorPenetration>0.5</armorPenetration>
+              <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+              <extraMeleeDamages>
+                <li>
+                  <def>Burn</def>
+                  <amount>6</amount>
+                  <chance>100</chance>
+                </li>
+              </extraMeleeDamages>
+              <soundMeleeHit>MeleeHit_BionicPunch</soundMeleeHit>
+              <soundMeleeMiss>MeleeMiss_BionicPunch</soundMeleeMiss>
+            </li>
+            <li>
+                <label>infernal slash</label>
+                <capacities>
+                  <li>Cut</li>
+                </capacities>
+                <power>10</power>
+                <cooldownTime>1</cooldownTime>
+                <armorPenetration>0.5</armorPenetration>
+                <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+                <extraMeleeDamages>
+                  <li>
+                    <def>Burn</def>
+                    <amount>6</amount>
+                    <chance>100</chance>
+                  </li>
+                </extraMeleeDamages>
+                <soundMeleeHit>MeleeHit_BionicPunch</soundMeleeHit>
+                <soundMeleeMiss>MeleeMiss_BionicPunch</soundMeleeMiss>
+              </li>
+          </tools>
+         </li>
+         <li Class="HellBionics.HediffCompProperties_Plasma">
+          <plasmaPerTick>-0.001</plasmaPerTick>
+          <maximumBase>1</maximumBase>
+        </li>
+      </comps>
+  </HediffDef>
+
+  <ThingDef ParentName="HB_BASE">
+    <defName>HB_InfernalArm</defName>
+    <label>infernal arm</label>
+    <description>A bionic arm, that has been changed by long exposure to infernal mechanites. 
+
+Despite it's appearance as a regular bionic arm, this prosthetic can use it's infernal mechanites to heat up it's knuckles and claws for additional damage, 
+while still retaining the benefits of it's unmodified counterpart.</description>
+	  <graphicData>
+			<texPath>Things/Item/BodyPart/Hellbionic_empty</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+    <descriptionHyperlinks><RecipeDef>HB_InstallInfernalArm</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Plasteel>80</Plasteel>
+      <ComponentSpacer>6</ComponentSpacer>
+    </costList>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+    <statBases>
+      <Mass>0.4</Mass>
+	    <MarketValue>2000</MarketValue>
+    </statBases>
+	    <techHediffsTags>
+      <li>Advanced</li>
+	<li>HB</li>
+    </techHediffsTags>
+    <researchPrerequisites>
+      <li>InfernalBionics</li>
+  </researchPrerequisites>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>HB_InstallInfernalArm</defName>
+    <label>install infernal arm</label>
+    <description>Install an infernal arm.</description>
+    <descriptionHyperlinks>
+      <ThingDef>HB_InfernalArm</ThingDef>
+      <HediffDef>HB_InfernalArm</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing infernal arm.</jobString>
+		<workAmount>4000</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>HB_InfernalArm</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>HB_InfernalArm</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Shoulder</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>HB_InfernalArm</addsHediff>
+	</RecipeDef>
+</Defs>
