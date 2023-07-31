@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-    <AbilityDef MayRequire="Ludeon.Royalty">
+    <AbilityDef>
         <defName>HB_InfernalDash</defName>
         <label>infernal dash</label>
         <description>Infernal Mechanites release their stored plasma through a series of jet nozzles, propelling the user forward and leaving a fiery trail.</description>
@@ -31,7 +31,7 @@
         </comps>
     </AbilityDef>
 
-    <AbilityDef MayRequire="Ludeon.Biotech">
+    <AbilityDef>
         <defName>HB_InfernalBreath</defName>
         <label>infernal breath</label>
         <description>Infernal mechanites accumulate their stored plasma in the mouth of the user, expelling it in a fiery blast.</description>

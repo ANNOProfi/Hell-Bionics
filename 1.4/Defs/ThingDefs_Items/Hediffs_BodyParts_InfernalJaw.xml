@@ -17,7 +17,7 @@
 	    <betterThanNatural>true</betterThanNatural>
     </addedPartProps>
     <comps>
-      <li Class="AthenaFramework.HediffCompProperties_GiveSingularAbility" MayRequire="Ludeon.Biotech">
+      <li Class="AthenaFramework.HediffCompProperties_GiveSingularAbility">
         <abilityDefs>
           <li>HB_InfernalBreath</li>
         </abilityDefs> 

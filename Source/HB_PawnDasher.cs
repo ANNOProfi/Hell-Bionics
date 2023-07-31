@@ -116,6 +116,7 @@ namespace HellBionics
 
         public override void Tick()
 		{
+			this.RecomputePosition();
 			if (this.flightEffecter == null && this.flightEffecterDef != null)
 			{
 				this.flightEffecter = this.flightEffecterDef.Spawn();

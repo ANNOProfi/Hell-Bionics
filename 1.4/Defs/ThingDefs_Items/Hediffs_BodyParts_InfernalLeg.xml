@@ -36,7 +36,7 @@
           </li>
         </tools>
       </li>
-      <li Class="AthenaFramework.HediffCompProperties_GiveSingularAbility" MayRequire="Ludeon.Royalty">
+      <li Class="AthenaFramework.HediffCompProperties_GiveSingularAbility">
         <abilityDefs>
           <li>HB_InfernalDash</li>
         </abilityDefs> 
