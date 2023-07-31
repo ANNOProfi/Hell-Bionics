@@ -4,7 +4,7 @@ using RimWorld;
 
 namespace HellBionics
 {
-    public static class JumpUtility
+    public static class HB_JumpUtility
     {
         public static bool DoJump(Pawn pawn, LocalTargetInfo currentTarget, CompReloadable comp, VerbProperties verbProps)
 		{

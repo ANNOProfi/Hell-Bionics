@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<Defs>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>HB_HellCannon</defName>
+    <label>hell cannon</label>
+    <labelNoun>a hell cannon</labelNoun>
+    <description>An installed hell cannon.</description>
+    <descriptionHyperlinks><ThingDef>HB_HellCannon</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>HB_HellCannon</spawnThingOnRemoved>
+    <defaultLabelColor>(1.0, 0.5, 0)</defaultLabelColor>
+    <addedPartProps>
+	    <partEfficiency>0.5</partEfficiency>
+      <solid>true</solid>
+	  <isGoodWeapon>true</isGoodWeapon>
+	  <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+	  <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>hell cannon</label>
+            <capacities>
+              <li>Blunt</li>
+            </capacities>
+            <power>20</power>
+            <cooldownTime>2</cooldownTime>
+            <armorPenetration>0.2</armorPenetration>
+            <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+            <extraMeleeDamages>
+              <li>
+                <def>Burn</def>
+                <amount>6</amount>
+                <chance>10</chance>
+              </li>
+            </extraMeleeDamages>
+          </li>
+        </tools>
+       </li>
+      <li Class="AthenaFramework.HediffCompProperties_GiveSingularAbility">
+          <abilityDefs>
+            <li>HB_HellCannonShot</li>
+          </abilityDefs> 
+      </li>
+        <li Class="HellBionics.HediffCompProperties_Plasma">
+        <plasmaPerTick>0.001</plasmaPerTick>
+        <maximumBase>15</maximumBase>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <statOffsets>
+            <WorkSpeedGlobal>-0.5</WorkSpeedGlobal>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="HB_BASE">
+    <defName>HB_HellCannon</defName>
+    <label>hell cannon</label>
+    <description>A salvaged mechanoid inferno cannon, mounted on the forearm, that has been changed by long exposure to infernal mechanites. 
+
+Lacking the systems of a mechanoid inferno turret, the shots of this cannon are less powerful, yet still the user becomes a walking piece of close to medium range support artillery.
+However, since the user now has a cannon for a forearm, they obviously can't do much working with this arm anymore.</description>
+	  <graphicData>
+			<texPath>Things/Item/BodyPart/Hellbionic_empty</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+    <descriptionHyperlinks><RecipeDef>HB_InstallHellCannon</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Plasteel>80</Plasteel>
+      <ComponentSpacer>6</ComponentSpacer>
+    </costList>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+    <statBases>
+      <Mass>0.4</Mass>
+	    <MarketValue>2000</MarketValue>
+    </statBases>
+	    <techHediffsTags>
+      <li>Advanced</li>
+	    <li>HB</li>
+    </techHediffsTags>
+    <researchPrerequisites>
+      <li>InfernalBionics</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>HB_InstallHellCannon</defName>
+    <label>install hell cannon</label>
+    <description>Install a hell cannon.</description>
+    <descriptionHyperlinks>
+      <ThingDef>HB_HellCannon</ThingDef>
+      <HediffDef>HB_HellCannon</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing hell cannon.</jobString>
+		<workAmount>4000</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>HB_HellCannon</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>HB_HellCannon</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Shoulder</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>HB_HellCannon</addsHediff>
+	</RecipeDef>
+</Defs>

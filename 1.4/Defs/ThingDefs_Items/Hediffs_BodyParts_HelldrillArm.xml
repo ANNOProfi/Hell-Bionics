@@ -8,10 +8,10 @@
     <description>An installed helldrill arm.</description>
     <descriptionHyperlinks><ThingDef>HB_HelldrillArm</ThingDef></descriptionHyperlinks>
     <spawnThingOnRemoved>HB_HelldrillArm</spawnThingOnRemoved>
+    <defaultLabelColor>(1.0, 0.5, 0)</defaultLabelColor>
     <addedPartProps>
-      <partEfficiency>0.50</partEfficiency>
       <solid>true</solid>
-	<betterThanNatural>true</betterThanNatural>
+	  <betterThanNatural>true</betterThanNatural>
     </addedPartProps>
     <comps>
       <li Class="HediffCompProperties_VerbGiver">
@@ -29,18 +29,28 @@
                 <li>
                   <def>Burn</def>
                   <amount>6</amount>
-                  <chance>1</chance>
+                  <chance>100</chance>
                 </li>
-              </extraMeleeDamages>
+            </extraMeleeDamages>
           </li>
         </tools>
+      </li>
+      <li Class="HellBionics.HediffCompProperties_Plasma">
+        <plasmaPerTick>-0.001</plasmaPerTick>
+        <maximumBase>1</maximumBase>
       </li>
     </comps>
     <stages>
       <li>
         <statOffsets>
-          <MiningSpeed>0.60</MiningSpeed>
+          <MiningSpeed>1.80</MiningSpeed>
         </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.08</offset>
+          </li>
+        </capMods>
       </li>
     </stages>
   </HediffDef>
@@ -48,12 +58,9 @@
   <ThingDef ParentName="HB_BASE">
     <defName>HB_HelldrillArm</defName>
     <label>helldrill arm</label>
-    <description>An advanced arm replacement, upgraded with plasma sword technology. The hand and forearm can form a plasteel reinforced drill, which is coated in a layer of plasma.
+    <description>A drill arm, that has been changed by long exposure to infernal mechanites. The hand and forearm form the plasteel reinforced drill, which is coated in a layer of plasma.
 
-As it is of the same line as the colloquially named hellsaw arm, this prosthetic is nicknamed the helldrill by miners.
-
-Designed to melt itself through even the hardest of materials, the helldrill gives an exceptional bonus to mining speed, at the obvious cost of finer manipulation, as it is quite unwieldy,
-even in it's regular hand configuration.</description>
+Hot enough, to melt itself through even the hardest of materials, the helldrill gives an exceptional bonus to mining speed, at the obvious cost of finer manipulation, as it is quite unwieldy.</description>
 	  <graphicData>
 			<texPath>Things/Item/BodyPart/Helldrill_arm</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -63,15 +70,18 @@ even in it's regular hand configuration.</description>
       <Plasteel>80</Plasteel>
       <ComponentSpacer>6</ComponentSpacer>
     </costList>
-    <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
     <statBases>
       <Mass>0.4</Mass>
 	    <MarketValue>1850</MarketValue>
     </statBases>
 	    <techHediffsTags>
-      <li>Advanced</li>
-	<li>HB</li>
+        <li>Advanced</li>
+	      <li>HB</li>
     </techHediffsTags>
+    <researchPrerequisites>
+      <li>InfernalBionics</li>
+  </researchPrerequisites>
   </ThingDef>
 
   <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">

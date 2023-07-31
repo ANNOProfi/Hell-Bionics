@@ -63,7 +63,7 @@ namespace HellBionics
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             base.Apply(target, dest);
-            infernalUtility.OffsetPlasma(-(this.Props.plasmaCost*(target.Cell.DistanceTo(pawn.PositionHeld)/this.Props.range)));
+            infernalUtility.OffsetPlasma(-(this.Props.plasmaCost));
         }
 
         public override bool GizmoDisabled(out string reason)

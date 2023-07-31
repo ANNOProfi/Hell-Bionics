@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using Verse;
 
@@ -38,7 +39,7 @@ namespace HellBionics
 			Widgets.FillableBar(rect4, fillPercent, HB_Gizmo_PlasmaStatus.FullShieldBarTex, HB_Gizmo_PlasmaStatus.EmptyShieldBarTex, false);
 			Text.Font = GameFont.Small;
 			Text.Anchor = TextAnchor.MiddleCenter;
-			Widgets.Label(rect4, this.infernalUtility.RemainingPlasma.ToString("F0") + " / " + this.infernalUtility.MaximumPlasma.ToString("F0"));
+			Widgets.Label(rect4, Math.Floor(this.infernalUtility.RemainingPlasma).ToString("F0") + " / " + Math.Floor(this.infernalUtility.MaximumPlasma).ToString("F0"));
 			Text.Anchor = TextAnchor.UpperLeft;
 			return new GizmoResult(GizmoState.Clear);
         }
