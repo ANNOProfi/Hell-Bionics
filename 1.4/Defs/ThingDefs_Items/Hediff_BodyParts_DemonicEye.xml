@@ -8,7 +8,7 @@
     <label>demonic eye</label>
     <labelNoun>a demonic eye</labelNoun>
     <description>An installed demonic eye.</description>
-    <descriptionHyperlinks><ThingDef>HB_InfernalJaw</ThingDef></descriptionHyperlinks>
+    <descriptionHyperlinks><ThingDef>HB_DemonicEye</ThingDef></descriptionHyperlinks>
     <spawnThingOnRemoved>HB_DemonicEye</spawnThingOnRemoved>
     <defaultLabelColor>(1.0, 0.5, 0)</defaultLabelColor>
     <addedPartProps>

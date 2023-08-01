@@ -8,7 +8,7 @@
     <label>infernal heart</label>
     <labelNoun>an infernal heart</labelNoun>
     <description>An installed infernal heart.</description>
-    <descriptionHyperlinks><ThingDef>HB_InfernalJaw</ThingDef></descriptionHyperlinks>
+    <descriptionHyperlinks><ThingDef>HB_InfernalHeart</ThingDef></descriptionHyperlinks>
     <spawnThingOnRemoved>HB_InfernalHeart</spawnThingOnRemoved>
     <defaultLabelColor>(1.0, 0.5, 0)</defaultLabelColor>
     <addedPartProps>

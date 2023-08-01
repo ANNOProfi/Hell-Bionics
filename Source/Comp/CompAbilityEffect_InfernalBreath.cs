@@ -68,7 +68,7 @@ namespace HellBionics
 			IntVec3 position = this.parent.pawn.Position;
 			float num = Mathf.Atan2((float)(-(float)(target.Cell.z - position.z)), (float)(target.Cell.x - position.x)) * 57.29578f;
 			FloatRange value = new FloatRange(num - 10f, num + 10f);
-			GenExplosion.DoExplosion(position, this.parent.pawn.MapHeld, this.Props.range, DamageDefOf.Flame, this.pawn);
+			GenExplosion.DoExplosion(position, this.parent.pawn.MapHeld, this.Props.range, DamageDefOf.Flame, this.pawn, -1, -1f, null, null, null, null, null, 1f, 1, null, false, null, 0f, 1, 1f, false, null, null, new FloatRange?(value), false, 0.6f, 0f, false, null, 1f);
 			base.Apply(target, dest);
 		}
 
