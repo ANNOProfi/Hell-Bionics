@@ -78,7 +78,7 @@ namespace HellBionics
 			{
 				action = delegate(LocalTargetInfo a, LocalTargetInfo b)
 				{
-					this.parent.AddEffecterToMaintain(EffecterDefOf.Fire_Spew.Spawn(this.parent.pawn.Position, a.Cell, this.parent.pawn.Map, 1f), this.pawn.Position, a.Cell, 17, this.pawn.MapHeld);
+					this.parent.AddEffecterToMaintain(HB_DefOf.HB_InfernalBreath.Spawn(this.parent.pawn.Position, a.Cell, this.parent.pawn.Map, 1f), this.pawn.Position, a.Cell, 17, this.pawn.MapHeld);
 				},
 				ticksAwayFromCast = 17
 			};

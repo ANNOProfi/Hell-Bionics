@@ -14,6 +14,8 @@ namespace HellBionics
         //[MayRequireRoyalty]
         public static ThingDef HB_PawnDasher;
 
+        public static EffecterDef HB_InfernalBreath;
+
         public static HediffDef HB_InfernalUtility;
     }
 }
