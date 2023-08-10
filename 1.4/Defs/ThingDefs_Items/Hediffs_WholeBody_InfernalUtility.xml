@@ -10,5 +10,14 @@
         <comps>
             <li Class="HellBionics.HediffCompProperties_InfernalUtility"/>
         </comps>
+        <stages>
+            <li>
+                <statOffsets>
+                    <Flammability>-0.5</Flammability>
+                    <ComfyTemperatureMin>-16</ComfyTemperatureMin>
+                    <ComfyTemperatureMax>16</ComfyTemperatureMax>
+                </statOffsets>
+            </li>
+        </stages>
     </HediffDef>
 </Defs>
