@@ -32,7 +32,7 @@
 The transformation process has rendered this eye better than that of a human. 
 However, the most obvious change is cosmetic in nature, as the sclera has become pitch black, the pupil, slitted and the iris is glowing a burning orange.</description>
 	  <graphicData>
-			<texPath>Things/Item/BodyPart/Hellbionic_empty</texPath>
+			<texPath>Things/Item/BodyPart/Demonic_eye</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
     <descriptionHyperlinks><RecipeDef>HB_InstallDemonicEye</RecipeDef></descriptionHyperlinks>

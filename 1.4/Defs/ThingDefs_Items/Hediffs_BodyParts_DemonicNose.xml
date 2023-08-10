@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<Defs>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>HB_DemonicNose</defName>
+    <label>demonic nose</label>
+    <labelNoun>a demonic nose</labelNoun>
+    <description>An installed demonic nose.</description>
+    <descriptionHyperlinks><ThingDef>HB_DemonicNose</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>HB_DemonicNose</spawnThingOnRemoved>
+    <defaultLabelColor>(1.0, 0.5, 0)</defaultLabelColor>
+    <addedPartProps>
+	    <partEfficiency>1.15</partEfficiency>
+      <solid>true</solid>
+	  <isGoodWeapon>true</isGoodWeapon>
+	  <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+	    <comps>
+            <li Class="HellBionics.HediffCompProperties_Plasma">
+                <plasmaPerTick>-0.001</plasmaPerTick>
+                <maximumBase>1</maximumBase>
+            </li>
+        </comps>
+        <stages>
+            <li>
+              <statOffsets>
+                  <MeleeHitChance>0.25</MeleeHitChance>
+                  <MeleeDodgeChance>0.25</MeleeDodgeChance>
+                  <AimingDelayFactor>-0.15</AimingDelayFactor>
+                  <ShootingAccuracyPawn>0.15</ShootingAccuracyPawn>
+              </statOffsets>
+            </li>
+          </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="HB_BASE">
+    <defName>HB_DemonicNose</defName>
+    <label>demonic nose</label>
+    <description>A bionic nose, that has been changed by long exposure to infernal mechanites. 
+
+On top of granting the benefits of it's unchanged counterpart, the infernal mechanites have equipped this nose with sensory strands, that enhance the user's combat capabilities.
+These strands look strangely like whiskers, though most people who make that comparison, don't live very long to spread the word.</description>
+	  <graphicData>
+			<texPath>Things/Item/BodyPart/Hellbionic_empty</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+    <descriptionHyperlinks><RecipeDef>HB_InstallDemonicNose</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Plasteel>80</Plasteel>
+      <ComponentSpacer>6</ComponentSpacer>
+    </costList>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+    <statBases>
+      <Mass>0.4</Mass>
+	    <MarketValue>2000</MarketValue>
+    </statBases>
+	    <techHediffsTags>
+      <li>Advanced</li>
+	<li>HB</li>
+    </techHediffsTags>
+    <researchPrerequisites>
+      <li>InfernalBionics</li>
+  </researchPrerequisites>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>HB_InstallDemonicNose</defName>
+    <label>install demonic nose</label>
+    <description>Install an demonic nose.</description>
+    <descriptionHyperlinks>
+      <ThingDef>HB_DemonicNose</ThingDef>
+      <HediffDef>HB_DemonicNose</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing demonic nose.</jobString>
+		<workAmount>4000</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>HB_DemonicNose</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>HB_DemonicNose</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Nose</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>HB_DemonicNose</addsHediff>
+	</RecipeDef>
+</Defs>

@@ -63,7 +63,7 @@ A prosthetic born out of necessetiy or desperation, the reaper blade is the arm 
 
 Obviously, trying to grab something with a literal scythe for an arm is next to impossible, so any work, other than melee combat and farming is off the table for users of this arm.</description>
 	  <graphicData>
-			<texPath>Things/Item/BodyPart/Hellbionic_empty</texPath>
+			<texPath>Things/Item/BodyPart/Reaper_blade</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
     <descriptionHyperlinks><RecipeDef>HB_InstallReaperBlade</RecipeDef></descriptionHyperlinks>
