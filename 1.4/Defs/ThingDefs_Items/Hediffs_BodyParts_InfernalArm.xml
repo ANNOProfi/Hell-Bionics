@@ -92,9 +92,6 @@ while still retaining the benefits of it's unmodified counterpart.</description>
       <li>Advanced</li>
 	<li>HB</li>
     </techHediffsTags>
-    <researchPrerequisites>
-      <li>InfernalBionics</li>
-  </researchPrerequisites>
   </ThingDef>
 
   <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">

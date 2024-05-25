@@ -6,19 +6,11 @@ namespace HellBionics
 {
     public static class HB_JumpUtility
     {
-        public static bool DoJump(Pawn pawn, LocalTargetInfo currentTarget, CompReloadable comp, VerbProperties verbProps)
+        public static bool DoJump(Pawn pawn, LocalTargetInfo currentTarget, VerbProperties verbProps)
 		{
 			if (!ModLister.CheckRoyaltyOrBiotech("Jumping"))
 			{
 				return false;
-			}
-			if (comp != null && !comp.CanBeUsed)
-			{
-				return false;
-			}
-			if (comp != null)
-			{
-				comp.UsedOnce();
 			}
 			IntVec3 position = pawn.Position;
 			IntVec3 cell = currentTarget.Cell;

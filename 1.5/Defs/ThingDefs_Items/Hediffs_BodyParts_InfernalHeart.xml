@@ -44,9 +44,9 @@ The infernal mechanites use this heart to transport the plasma, that they genera
       <Mass>0.4</Mass>
 	    <MarketValue>2000</MarketValue>
     </statBases>
-	    <techHediffsTags>
+    <techHediffsTags>
       <li>Advanced</li>
-	<li>HB</li>
+	    <li>HB</li>
     </techHediffsTags>
   </ThingDef>
 

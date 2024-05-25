@@ -77,9 +77,9 @@ but the fine motor manipulation of the user will still decrease, because, in cas
       <Mass>0.4</Mass>
 	    <MarketValue>2000</MarketValue>
     </statBases>
-	    <techHediffsTags>
+    <techHediffsTags>
       <li>Advanced</li>
-	<li>HB</li>
+	    <li>HB</li>
     </techHediffsTags>
   </ThingDef>
 

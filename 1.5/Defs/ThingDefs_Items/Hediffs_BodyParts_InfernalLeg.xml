@@ -73,7 +73,7 @@ Additionally, the infernal mechanites contained within can use their stored plas
     </statBases>
     <techHediffsTags>
       <li>Advanced</li>
-	<li>HB</li>
+	    <li>HB</li>
     </techHediffsTags>
   </ThingDef>
 

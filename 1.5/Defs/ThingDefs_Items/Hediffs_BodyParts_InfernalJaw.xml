@@ -62,9 +62,9 @@ Additionally, the infernal mechanites in the user's system can accumulate their 
       <Mass>0.4</Mass>
 	    <MarketValue>2000</MarketValue>
     </statBases>
-	    <techHediffsTags>
+    <techHediffsTags>
       <li>Advanced</li>
-	<li>HB</li>
+	    <li>HB</li>
     </techHediffsTags>
   </ThingDef>
 

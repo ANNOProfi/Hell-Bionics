@@ -75,7 +75,7 @@ Hot enough, to melt itself through even the hardest of materials, the helldrill 
       <Mass>0.4</Mass>
 	    <MarketValue>1850</MarketValue>
     </statBases>
-	    <techHediffsTags>
+    <techHediffsTags>
         <li>Advanced</li>
 	      <li>HB</li>
     </techHediffsTags>

@@ -1,6 +1,7 @@
 using UnityEngine;
 using Verse;
 using RimWorld;
+using RimWorld.Utility;
 
 namespace HellBionics
 {
@@ -22,7 +23,7 @@ namespace HellBionics
 			}
 		}
 
-        protected override float EffectiveRange
+        public override float EffectiveRange
 		{
 			get
 			{
@@ -34,7 +35,7 @@ namespace HellBionics
 
         protected override bool TryCastShot()
 		{
-			return base.TryCastShot() && HB_JumpUtility.DoJump(this.CasterPawn, this.currentTarget, base.ReloadableCompSource, this.verbProps);
+			return base.TryCastShot() && HB_JumpUtility.DoJump(this.CasterPawn, this.currentTarget, this.verbProps);
 		}
 
         public override void OnGUI(LocalTargetInfo target)
