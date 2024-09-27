@@ -84,6 +84,7 @@ Despite it's appearance as a regular bionic arm, this prosthetic has extended an
     </descriptionHyperlinks>
     <jobString>Installing hellclaw arm.</jobString>
 		<workAmount>4000</workAmount>
+    <uiIconThing>HB_HellclawArm</uiIconThing>
 		<ingredients>
 			<li>
 				<filter>

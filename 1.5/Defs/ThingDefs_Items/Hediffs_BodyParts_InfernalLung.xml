@@ -67,6 +67,7 @@ while conveniently filtering out any toxins that may have found themselves there
     </descriptionHyperlinks>
     <jobString>Installing infernal lung.</jobString>
 		<workAmount>4000</workAmount>
+    <uiIconThing>HB_InfernalLung</uiIconThing>
 		<ingredients>
 			<li>
 				<filter>

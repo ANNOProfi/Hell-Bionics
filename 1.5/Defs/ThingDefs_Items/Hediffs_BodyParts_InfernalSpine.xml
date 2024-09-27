@@ -59,6 +59,7 @@ The infernal mechanites use this spine as a central storage and transportation l
     </descriptionHyperlinks>
     <jobString>Installing infernal spine.</jobString>
 		<workAmount>4000</workAmount>
+    <uiIconThing>HB_InfernalSpine</uiIconThing>
 		<ingredients>
 			<li>
 				<filter>

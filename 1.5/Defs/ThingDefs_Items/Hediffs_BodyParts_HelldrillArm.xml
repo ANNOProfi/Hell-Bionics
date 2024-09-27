@@ -91,6 +91,7 @@ Hot enough, to melt itself through even the hardest of materials, the helldrill 
     </descriptionHyperlinks>
     <jobString>Installing helldrill arm.</jobString>
 		<workAmount>4000</workAmount>
+    <uiIconThing>HB_HelldrillArm</uiIconThing>
 		<ingredients>
 			<li>
 				<filter>

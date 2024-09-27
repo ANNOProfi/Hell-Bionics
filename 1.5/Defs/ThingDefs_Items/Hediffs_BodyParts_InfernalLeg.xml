@@ -87,6 +87,7 @@ Additionally, the infernal mechanites contained within can use their stored plas
     </descriptionHyperlinks>
     <jobString>Installing infernal leg.</jobString>
 		<workAmount>4000</workAmount>
+    <uiIconThing>HB_InfernalLeg</uiIconThing>
 		<ingredients>
 			<li>
 				<filter>

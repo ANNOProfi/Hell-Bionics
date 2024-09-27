@@ -95,6 +95,7 @@ However, since the user now has a cannon for a forearm, they obviously can't do 
     </descriptionHyperlinks>
     <jobString>Installing hell cannon.</jobString>
 		<workAmount>4000</workAmount>
+    <uiIconThing>HB_HellCannon</uiIconThing>
 		<ingredients>
 			<li>
 				<filter>

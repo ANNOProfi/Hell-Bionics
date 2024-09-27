@@ -64,6 +64,7 @@ The stomach is the main storage point for the plasma, that the infernal mechanit
     </descriptionHyperlinks>
     <jobString>Installing infernal stomach.</jobString>
 		<workAmount>4000</workAmount>
+    <uiIconThing>HB_InfernalStomach</uiIconThing>
 		<ingredients>
 			<li>
 				<filter>

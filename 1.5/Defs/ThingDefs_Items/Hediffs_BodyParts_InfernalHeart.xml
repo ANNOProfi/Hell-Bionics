@@ -60,6 +60,7 @@ The infernal mechanites use this heart to transport the plasma, that they genera
     </descriptionHyperlinks>
     <jobString>Installing infernal heart.</jobString>
 		<workAmount>4000</workAmount>
+    <uiIconThing>HB_InfernalHeart</uiIconThing>
 		<ingredients>
 			<li>
 				<filter>

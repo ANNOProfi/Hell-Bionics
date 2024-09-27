@@ -87,6 +87,7 @@ A Variant of the Infernal Spine, this one has been equipped with a shield genera
     </descriptionHyperlinks>
     <jobString>Installing infernal shield spine.</jobString>
 		<workAmount>4000</workAmount>
+    <uiIconThing>HB_InfernalShieldSpine</uiIconThing>
 		<ingredients>
 			<li>
 				<filter>

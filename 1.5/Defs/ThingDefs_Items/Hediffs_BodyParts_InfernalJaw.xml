@@ -78,6 +78,7 @@ Additionally, the infernal mechanites in the user's system can accumulate their 
     </descriptionHyperlinks>
     <jobString>Installing infernal jaw.</jobString>
 		<workAmount>4000</workAmount>
+    <uiIconThing>HB_InfernalJaw</uiIconThing>
 		<ingredients>
 			<li>
 				<filter>

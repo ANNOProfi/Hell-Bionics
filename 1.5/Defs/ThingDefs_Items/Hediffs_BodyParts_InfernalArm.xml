@@ -104,6 +104,7 @@ while still retaining the benefits of it's unmodified counterpart.</description>
     </descriptionHyperlinks>
     <jobString>Installing infernal arm.</jobString>
 		<workAmount>4000</workAmount>
+    <uiIconThing>HB_InfernalArm</uiIconThing>
 		<ingredients>
 			<li>
 				<filter>

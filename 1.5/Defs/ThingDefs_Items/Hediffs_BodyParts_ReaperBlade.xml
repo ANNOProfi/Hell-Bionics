@@ -20,7 +20,7 @@
          <li Class="HediffCompProperties_VerbGiver">
           <tools>
             <li>
-              <label>hellsaw slash</label>
+              <label>reaper slash</label>
               <capacities>
                 <li>Cut</li>
               </capacities>
@@ -92,6 +92,7 @@ Obviously, trying to grab something with a literal scythe for an arm is next to 
     </descriptionHyperlinks>
     <jobString>Installing reaper blade.</jobString>
 		<workAmount>4000</workAmount>
+    <uiIconThing>HB_ReaperBlade</uiIconThing>
 		<ingredients>
 			<li>
 				<filter>

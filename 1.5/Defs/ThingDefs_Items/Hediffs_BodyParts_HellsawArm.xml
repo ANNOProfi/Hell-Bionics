@@ -93,6 +93,7 @@ but the fine motor manipulation of the user will still decrease, because, in cas
     </descriptionHyperlinks>
     <jobString>Installing hellsaw arm.</jobString>
 		<workAmount>4000</workAmount>
+    <uiIconThing>HB_HellsawArm</uiIconThing>
 		<ingredients>
 			<li>
 				<filter>

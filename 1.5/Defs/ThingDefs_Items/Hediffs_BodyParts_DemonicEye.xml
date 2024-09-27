@@ -61,6 +61,7 @@ However, the most obvious change is cosmetic in nature, as the sclera has become
     </descriptionHyperlinks>
     <jobString>Installing demonic eye.</jobString>
 		<workAmount>4000</workAmount>
+    <uiIconThing>HB_DemonicEye</uiIconThing>
 		<ingredients>
 			<li>
 				<filter>

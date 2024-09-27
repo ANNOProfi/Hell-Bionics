@@ -72,6 +72,7 @@ These strands look strangely like whiskers, though most people who make that com
     </descriptionHyperlinks>
     <jobString>Installing demonic nose.</jobString>
 		<workAmount>4000</workAmount>
+    <uiIconThing>HB_DemonicNose</uiIconThing>
 		<ingredients>
 			<li>
 				<filter>
