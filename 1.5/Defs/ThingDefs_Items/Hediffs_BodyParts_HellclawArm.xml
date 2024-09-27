@@ -12,7 +12,6 @@
     <spawnThingOnRemoved>HB_HellclawArm</spawnThingOnRemoved>
     <defaultLabelColor>(1.0, 0.5, 0)</defaultLabelColor>
     <addedPartProps>
-	    <partEfficiency>1.20</partEfficiency>
       <solid>true</solid>
 	  <isGoodWeapon>true</isGoodWeapon>
 	  <betterThanNatural>true</betterThanNatural>
@@ -44,8 +43,14 @@
          <li Class="HellBionics.HediffCompProperties_Plasma">
           <plasmaPerTick>-0.001</plasmaPerTick>
           <maximumBase>1</maximumBase>
+          <partEfficiency>1.20</partEfficiency>
         </li>
       </comps>
+      <stages>
+        <li>
+          <partEfficiencyOffset>0</partEfficiencyOffset>
+        </li>
+      </stages>
   </HediffDef>
 
   <ThingDef ParentName="HB_BASE">

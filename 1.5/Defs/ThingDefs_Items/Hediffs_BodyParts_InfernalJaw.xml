@@ -12,7 +12,6 @@
     <spawnThingOnRemoved>HB_InfernalJaw</spawnThingOnRemoved>
     <defaultLabelColor>(1.0, 0.5, 0)</defaultLabelColor>
     <addedPartProps>
-	    <partEfficiency>1.2</partEfficiency>
       <solid>true</solid>
 	    <betterThanNatural>true</betterThanNatural>
     </addedPartProps>
@@ -25,6 +24,7 @@
       <li Class="HellBionics.HediffCompProperties_Plasma">
         <plasmaPerTick>0.01</plasmaPerTick>
         <maximumBase>5</maximumBase>
+        <partEfficiency>1.2</partEfficiency>
       </li>
     </comps>
     <stages>
@@ -36,6 +36,7 @@
         <NegotiationAbility>-0.50</NegotiationAbility>
         <ToxicEnvironmentResistance>0.3</ToxicEnvironmentResistance>
         </statOffsets>
+        <partEfficiencyOffset>0</partEfficiencyOffset>
       </li>
     </stages>
   </HediffDef>

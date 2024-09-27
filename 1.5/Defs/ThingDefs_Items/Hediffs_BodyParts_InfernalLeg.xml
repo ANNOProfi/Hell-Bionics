@@ -11,7 +11,6 @@
     <defaultLabelColor>(1.0, 0.5, 0)</defaultLabelColor>
     <addedPartProps>
       <solid>true</solid>
-      <partEfficiency>1.50</partEfficiency>
       <betterThanNatural>true</betterThanNatural>
     </addedPartProps>
     <comps>
@@ -44,8 +43,14 @@
       <li Class="HellBionics.HediffCompProperties_Plasma">
         <plasmaPerTick>0.01</plasmaPerTick>
         <maximumBase>10</maximumBase>
+        <partEfficiency>1.50</partEfficiency>
       </li>
     </comps>
+    <stages>
+      <li>
+        <partEfficiencyOffset>0</partEfficiencyOffset>
+      </li>
+    </stages>
   </HediffDef>
 
   <ThingDef ParentName="HB_BASE">

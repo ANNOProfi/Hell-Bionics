@@ -11,7 +11,6 @@
     <spawnThingOnRemoved>HB_InfernalLung</spawnThingOnRemoved>
     <defaultLabelColor>(1.0, 0.5, 0)</defaultLabelColor>
     <addedPartProps>
-	    <partEfficiency>1.2</partEfficiency>
       <solid>true</solid>
 	    <betterThanNatural>true</betterThanNatural>
     </addedPartProps>
@@ -20,12 +19,14 @@
           <statOffsets>
           <ToxicEnvironmentResistance>0.4</ToxicEnvironmentResistance>
           </statOffsets>
+          <partEfficiencyOffset>0</partEfficiencyOffset>
         </li>
       </stages>
     <comps>
       <li Class="HellBionics.HediffCompProperties_Plasma">
         <plasmaPerTick>0.08</plasmaPerTick>
         <maximumBase>10</maximumBase>
+        <partEfficiency>1.2</partEfficiency>
       </li>
     </comps>
   </HediffDef>

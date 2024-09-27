@@ -12,7 +12,6 @@
     <spawnThingOnRemoved>HB_DemonicNose</spawnThingOnRemoved>
     <defaultLabelColor>(1.0, 0.5, 0)</defaultLabelColor>
     <addedPartProps>
-	    <partEfficiency>1.15</partEfficiency>
       <solid>true</solid>
 	  <isGoodWeapon>true</isGoodWeapon>
 	  <betterThanNatural>true</betterThanNatural>
@@ -21,6 +20,7 @@
             <li Class="HellBionics.HediffCompProperties_Plasma">
                 <plasmaPerTick>-0.001</plasmaPerTick>
                 <maximumBase>1</maximumBase>
+                <partEfficiency>1.15</partEfficiency>
             </li>
         </comps>
         <stages>
@@ -31,6 +31,7 @@
                   <AimingDelayFactor>-0.15</AimingDelayFactor>
                   <ShootingAccuracyPawn>0.15</ShootingAccuracyPawn>
               </statOffsets>
+              <partEfficiencyOffset>0</partEfficiencyOffset>
             </li>
           </stages>
   </HediffDef>

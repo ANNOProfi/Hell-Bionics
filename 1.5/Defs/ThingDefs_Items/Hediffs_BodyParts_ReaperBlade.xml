@@ -11,45 +11,47 @@
     <spawnThingOnRemoved>HB_ReaperBlade</spawnThingOnRemoved>
     <defaultLabelColor>(1.0, 0.5, 0)</defaultLabelColor>
     <addedPartProps>
-	    <partEfficiency>0.50</partEfficiency>
       <solid>true</solid>
-	  <isGoodWeapon>true</isGoodWeapon>
-	  <betterThanNatural>true</betterThanNatural>
+	    <isGoodWeapon>true</isGoodWeapon>
+	    <betterThanNatural>true</betterThanNatural>
     </addedPartProps>
-			 <comps>
-         <li Class="HediffCompProperties_VerbGiver">
-          <tools>
-            <li>
-              <label>reaper slash</label>
-              <capacities>
-                <li>Cut</li>
-              </capacities>
-              <power>20</power>
-              <cooldownTime>1</cooldownTime>
-              <armorPenetration>0.5</armorPenetration>
-              <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-              <extraMeleeDamages>
-                <li>
-                  <def>Burn</def>
-                  <amount>6</amount>
-                  <chance>100</chance>
-                </li>
-              </extraMeleeDamages>
-            </li>
-          </tools>
-         </li>
-         <li Class="HellBionics.HediffCompProperties_Plasma">
-          <plasmaPerTick>-0.001</plasmaPerTick>
-          <maximumBase>1</maximumBase>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>reaper slash</label>
+            <capacities>
+              <li>Cut</li>
+            </capacities>
+            <power>20</power>
+            <cooldownTime>1</cooldownTime>
+            <armorPenetration>0.5</armorPenetration>
+            <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+            <extraMeleeDamages>
+              <li>
+                <def>Burn</def>
+                <amount>6</amount>
+                <chance>100</chance>
+              </li>
+            </extraMeleeDamages>
           </li>
-        </comps>
+        </tools>
+      </li>
+      <li Class="HellBionics.HediffCompProperties_Plasma">
+      <plasmaPerTick>-0.001</plasmaPerTick>
+      <maximumBase>1</maximumBase>
+      <partEfficiency>0.50</partEfficiency>
+      </li>
+    </comps>
     <stages>
       <li>
         <statOffsets>
             <WorkSpeedGlobal>-0.5</WorkSpeedGlobal>
             <MeleeHitChance>+3</MeleeHitChance>
             <PlantWorkSpeed>0.5</PlantWorkSpeed>
+            <PlantHarvestYield>-0.25</PlantHarvestYield>
         </statOffsets>
+        <partEfficiencyOffset>0</partEfficiencyOffset>
       </li>
     </stages>
   </HediffDef>

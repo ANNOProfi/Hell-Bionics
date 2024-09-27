@@ -14,5 +14,7 @@ namespace HellBionics
         public float maximumBase = 10f;
 
         public float plasmaPerTick = 0.01f;
+
+        public float partEfficiency = 1f;
     }
 }

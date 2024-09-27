@@ -51,6 +51,7 @@
             <offset>-0.08</offset>
           </li>
         </capMods>
+        <partEfficiencyOffset>0</partEfficiencyOffset>
       </li>
     </stages>
   </HediffDef>

@@ -11,7 +11,6 @@
     <spawnThingOnRemoved>HB_InfernalStomach</spawnThingOnRemoved>
     <defaultLabelColor>(1.0, 0.5, 0)</defaultLabelColor>
     <addedPartProps>
-        <partEfficiency>1.2</partEfficiency>
         <solid>true</solid>
         <betterThanNatural>true</betterThanNatural>
     </addedPartProps>
@@ -19,13 +18,15 @@
       <li Class="HellBionics.HediffCompProperties_Plasma">
         <plasmaPerTick>0.065</plasmaPerTick>
         <maximumBase>50</maximumBase>
+        <partEfficiency>1.2</partEfficiency>
       </li>
     </comps>
     <stages>
-        <li>
-            <foodPoisoningChanceFactor>0</foodPoisoningChanceFactor> 
-        </li>
-      </stages>
+      <li>
+          <foodPoisoningChanceFactor>0</foodPoisoningChanceFactor>
+          <partEfficiencyOffset>0</partEfficiencyOffset> 
+      </li>
+    </stages>
   </HediffDef>
 
   <ThingDef ParentName="HB_BASE">

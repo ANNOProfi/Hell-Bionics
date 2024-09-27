@@ -11,7 +11,6 @@
     <spawnThingOnRemoved>HB_InfernalShieldSpine</spawnThingOnRemoved>
     <defaultLabelColor>(1.0, 0.5, 0)</defaultLabelColor>
     <addedPartProps>
-      <partEfficiency>1.2</partEfficiency>
       <solid>true</solid>
       <betterThanNatural>true</betterThanNatural>
     </addedPartProps>
@@ -19,6 +18,7 @@
       <li Class="HellBionics.HediffCompProperties_Plasma">
         <plasmaPerTick>0.05</plasmaPerTick>
         <maximumBase>10</maximumBase>
+        <partEfficiency>1.2</partEfficiency>
       </li>
       <li Class="HellBionics.HediffCompProperties_InfernalShield">
         <maxEnergy>100</maxEnergy>
@@ -49,6 +49,11 @@
         </graphicData>
       </li>
     </comps>
+    <stages>
+      <li>
+        <partEfficiencyOffset>0</partEfficiencyOffset>
+      </li>
+    </stages>
   </HediffDef>
 
   <ThingDef ParentName="HB_BASE">
