@@ -3,7 +3,7 @@
 
 <Defs>
 
-  <HediffDef ParentName="AddedBodyPartBase">
+  <HediffDef ParentName="HB_InfernalAddedBodyPartBase">
     <defName>HB_DemonicNose</defName>
     <label>demonic nose</label>
     <labelNoun>a demonic nose</labelNoun>

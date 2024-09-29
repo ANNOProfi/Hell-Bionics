@@ -3,7 +3,7 @@
 
 <Defs>
 
-  <HediffDef ParentName="AddedBodyPartBase">
+  <HediffDef ParentName="HB_InfernalAddedBodyPartBase">
     <defName>HB_HellsawArm</defName>
     <label>hellsaw arm</label>
     <labelNoun>a hellsaw arm</labelNoun>

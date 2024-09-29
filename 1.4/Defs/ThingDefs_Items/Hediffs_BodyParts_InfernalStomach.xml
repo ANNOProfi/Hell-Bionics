@@ -2,7 +2,7 @@
 
 <Defs>
 
-  <HediffDef ParentName="AddedBodyPartBase">
+  <HediffDef ParentName="HB_InfernalAddedBodyPartBase">
     <defName>HB_InfernalStomach</defName>
     <label>infernal stomach</label>
     <labelNoun>an infernal stomach</labelNoun>

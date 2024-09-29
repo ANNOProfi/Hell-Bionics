@@ -2,7 +2,7 @@
 
 <Defs>
 
-  <HediffDef ParentName="AddedBodyPartBase">
+  <HediffDef ParentName="HB_InfernalAddedBodyPartBase">
     <defName>HB_InfernalSpine</defName>
     <label>infernal spine</label>
     <labelNoun>an infernal spine</labelNoun>
@@ -13,19 +13,14 @@
     <addedPartProps>
       <solid>true</solid>
       <betterThanNatural>true</betterThanNatural>
+      <partEfficiency>1.2</partEfficiency>
     </addedPartProps>
     <comps>
       <li Class="HellBionics.HediffCompProperties_Plasma">
         <plasmaPerTick>0.05</plasmaPerTick>
         <maximumBase>30</maximumBase>
-        <partEfficiency>1.2</partEfficiency>
       </li>
     </comps>
-    <stages>
-      <li>
-        <partEfficiencyOffset>0</partEfficiencyOffset>
-      </li>
-    </stages>
   </HediffDef>
 
   <ThingDef ParentName="HB_BASE">

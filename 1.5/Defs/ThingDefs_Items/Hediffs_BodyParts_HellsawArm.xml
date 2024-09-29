@@ -3,7 +3,7 @@
 
 <Defs>
 
-  <HediffDef ParentName="AddedBodyPartBase">
+  <HediffDef ParentName="HB_InfernalAddedBodyPartBase">
     <defName>HB_HellsawArm</defName>
     <label>hellsaw arm</label>
     <labelNoun>a hellsaw arm</labelNoun>
@@ -13,6 +13,7 @@
     <defaultLabelColor>(1.0, 0.5, 0)</defaultLabelColor>
     <addedPartProps>
       <solid>true</solid>
+      <partEfficiency>0.90</partEfficiency>
 	  <isGoodWeapon>true</isGoodWeapon>
 	  <betterThanNatural>true</betterThanNatural>
     </addedPartProps>
@@ -41,7 +42,6 @@
          <li Class="HellBionics.HediffCompProperties_Plasma">
           <plasmaPerTick>-0.001</plasmaPerTick>
           <maximumBase>1</maximumBase>
-          <partEfficiency>0.90</partEfficiency>
           </li>
         </comps>
     <stages>
@@ -49,7 +49,6 @@
         <statOffsets>
           <MiningSpeed>0.40</MiningSpeed>
         </statOffsets>
-        <partEfficiencyOffset>0</partEfficiencyOffset>
       </li>
     </stages>
   </HediffDef>

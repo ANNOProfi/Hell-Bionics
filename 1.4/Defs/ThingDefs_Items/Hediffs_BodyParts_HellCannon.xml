@@ -3,7 +3,7 @@
 
 <Defs>
 
-  <HediffDef ParentName="AddedBodyPartBase">
+  <HediffDef ParentName="HB_InfernalAddedBodyPartBase">
     <defName>HB_HellCannon</defName>
     <label>hell cannon</label>
     <labelNoun>a hell cannon</labelNoun>

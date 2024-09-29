@@ -2,7 +2,7 @@
 
 <Defs>
 
-  <HediffDef ParentName="AddedBodyPartBase">
+  <HediffDef ParentName="HB_InfernalAddedBodyPartBase">
     <defName>HB_InfernalStomach</defName>
     <label>infernal stomach</label>
     <labelNoun>an infernal stomach</labelNoun>
@@ -13,18 +13,17 @@
     <addedPartProps>
         <solid>true</solid>
         <betterThanNatural>true</betterThanNatural>
+        <partEfficiency>1.2</partEfficiency>
     </addedPartProps>
     <comps>
       <li Class="HellBionics.HediffCompProperties_Plasma">
         <plasmaPerTick>0.065</plasmaPerTick>
         <maximumBase>50</maximumBase>
-        <partEfficiency>1.2</partEfficiency>
       </li>
     </comps>
     <stages>
       <li>
           <foodPoisoningChanceFactor>0</foodPoisoningChanceFactor>
-          <partEfficiencyOffset>0</partEfficiencyOffset> 
       </li>
     </stages>
   </HediffDef>

@@ -48,7 +48,7 @@ namespace HellBionics
 
         public void OffsetPlasma(float amountPerTick)
         {
-            if((RemainingPlasma + amountPerTick) < 0f)
+            if((RemainingPlasma + amountPerTick) <= 0f)
             {
                 RemainingPlasma = 0f;
             }
@@ -64,7 +64,7 @@ namespace HellBionics
 
         public override void CompPostTick(ref float severityAdjustment)
         {
-            if(RemainingPlasma < MaximumPlasma)
+            if(RemainingPlasma < MaximumPlasma || PlasmaPerTick < 0f && RemainingPlasma == MaximumPlasma)
             {
                 OffsetPlasma(PlasmaPerTick);
             }  
