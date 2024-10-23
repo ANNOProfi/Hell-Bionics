@@ -1,9 +1,9 @@
-using AthenaFramework;
+using RimWorld;
 using Verse;
 
 namespace HellBionics
 {
-    public class HediffComp_Plasma : HediffComp, IStageOverride
+    public class HediffComp_Plasma : HediffComp
     {
         public HediffCompProperties_Plasma Props
         {
@@ -50,24 +50,24 @@ namespace HellBionics
                 partEfficiencyCached = Def.addedPartProps.partEfficiency;
             }
 
-            if(partEfficiencyCached >= 1f)
-            {
-                if(disabled && InfernalUtility.RemainingPlasma > 0f)
-                {
-                    stage.partEfficiencyOffset = 0f;
-
-                    disabled = false;
-                }
-                else if(!disabled && InfernalUtility.RemainingPlasma == 0f)
-                {
-                    stage.partEfficiencyOffset = -partEfficiencyCached;
-
-                    disabled = true;
-                }
-            }
-            else if(partEfficiencyCached < 1f)
+            if(disabled && InfernalUtility.RemainingPlasma > 0f)
             {
                 stage.partEfficiencyOffset = 0f;
+
+                disabled = false;
+            }
+            else if(!disabled && InfernalUtility.RemainingPlasma == 0f)
+            {
+                if(parent.Part.def == BodyPartDefOf.Leg)
+                {
+                    stage.partEfficiencyOffset = -partEfficiencyCached + 0.16f;
+                }
+                else
+                {
+                    stage.partEfficiencyOffset = -partEfficiencyCached;
+                }
+
+                disabled = true;
             }
 
             return stage;

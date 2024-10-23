@@ -1,5 +1,3 @@
-using AthenaFramework;
-using RimWorld;
 using Verse;
 
 namespace HellBionics
@@ -7,11 +5,6 @@ namespace HellBionics
     public class Hediff_InfernalAddedPart : Hediff_AddedPart
     {
         public HediffStage stage = new HediffStage();
-
-        public override void PostAdd(DamageInfo? dinfo)
-        {
-            base.PostAdd(dinfo);
-        }
 
         public override HediffStage CurStage
         {
@@ -32,7 +25,7 @@ namespace HellBionics
                 {
                     if (comps[i] is HediffComp_Plasma plasmaComp)
                     {
-                        curStage = plasmaComp.GetStage(stage);
+                        curStage = plasmaComp.GetStage(curStage);
                     }
                 }
 
