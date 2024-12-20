@@ -53,7 +53,7 @@
     <label>hellclaw arm</label>
     <description>A bionic arm, that has been changed by long exposure to infernal mechanites. 
 
-Despite it's appearance as a regular bionic arm, this prosthetic has extended and extendable claws, which the infernal mechanites can heat up for additional damage.</description>
+Despite its appearance as a regular bionic arm, this prosthetic has extended and extendable claws, which the infernal mechanites can heat up for additional damage.</description>
 	  <graphicData>
 			<texPath>Things/Item/BodyPart/Hellbionic_empty</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
