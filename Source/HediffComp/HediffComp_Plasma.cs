@@ -21,9 +21,11 @@ namespace HellBionics
 			}
 		}
 
-        private bool disabled = false;
+        //private bool disabled = false;
 
-        private float partEfficiencyCached = 0f;
+        //private float partEfficiencyCached = 0f;
+
+        //private float ticksToReset = 60;
 
         public override void CompPostPostAdd(DamageInfo? dinfo)
         {
@@ -32,6 +34,7 @@ namespace HellBionics
                 Pawn.health.AddHediff(HB_DefOf.HB_InfernalUtility);
             }
             InfernalUtility.UpdateValues(this.Props.maximumBase, this.Props.plasmaPerTick);
+            InfernalUtility.OffsetPlasma(1f);
         }
 
         public override void CompPostPostRemoved()
@@ -43,6 +46,14 @@ namespace HellBionics
             }
         }
 
+        /*public override void CompPostTick(ref float severityAdjustment)
+        {
+            if(ticksToReset > 0)
+            {
+                ticksToReset--;
+            }
+        }
+
         public HediffStage GetStage(HediffStage stage)
         {
             if(partEfficiencyCached == 0f)
@@ -50,24 +61,21 @@ namespace HellBionics
                 partEfficiencyCached = Def.addedPartProps.partEfficiency;
             }
 
-            if(disabled && InfernalUtility.RemainingPlasma > 0f)
+            if(disabled && InfernalUtility.RemainingPlasma > 0f && ticksToReset <= 0)
             {
                 stage.partEfficiencyOffset = 0f;
 
                 disabled = false;
+
+                ticksToReset = -1;
             }
             else if(!disabled && InfernalUtility.RemainingPlasma == 0f)
             {
-                if(parent.Part.def == BodyPartDefOf.Leg)
-                {
-                    stage.partEfficiencyOffset = -partEfficiencyCached + 0.16f;
-                }
-                else
-                {
-                    stage.partEfficiencyOffset = -partEfficiencyCached;
-                }
+                stage.partEfficiencyOffset = -partEfficiencyCached;
 
                 disabled = true;
+                
+                ticksToReset = 60;
             }
 
             return stage;
@@ -77,6 +85,6 @@ namespace HellBionics
         {
             Scribe_Values.Look(ref disabled, "disabled", false);
             Scribe_Values.Look(ref partEfficiencyCached, "partEfficiencyCached", 0f);
-        }
+        }*/
     }
 }

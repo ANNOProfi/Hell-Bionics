@@ -4,7 +4,7 @@ namespace HellBionics
 {
     public class Hediff_InfernalAddedPart : Hediff_AddedPart
     {
-        public HediffStage stage = new HediffStage();
+        /*public HediffStage stage = new HediffStage();
 
         public override HediffStage CurStage
         {
@@ -31,6 +31,6 @@ namespace HellBionics
 
                 return curStage;
             }
-        }
+        }*/
     }
 }

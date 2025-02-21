@@ -2,7 +2,7 @@
 <Defs>
 
   <HediffDef ParentName="AddedBodyPartBase" Name="HB_InfernalAddedBodyPartBase" Abstract="True">
-    <hediffClass>HellBionics.Hediff_InfernalAddedPart</hediffClass>
+    <hediffClass>Hediff_AddedPart</hediffClass>
   </HediffDef>
 
   <ThingDef Name="HBBodyPartModBase" Abstract="True">

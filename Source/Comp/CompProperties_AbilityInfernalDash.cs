@@ -1,8 +1,9 @@
 using RimWorld;
+using BrokenPlankFramework;
 
 namespace HellBionics
 {
-    public class CompProperties_AbilityInfernalDash : CompProperties_AbilityEffect
+    public class CompProperties_AbilityInfernalDash : CompProperties_AbilitySingularTracker
     {
         public CompProperties_AbilityInfernalDash()
         {

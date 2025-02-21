@@ -27,6 +27,7 @@
             <li Class="HellBionics.CompProperties_AbilityInfernalDash">
                 <range>10</range>
                 <plasmaCost>10</plasmaCost>
+                <useCharges>true</useCharges>
             </li>
         </comps>
     </AbilityDef>
@@ -62,7 +63,7 @@
         <label>hell cannon shot</label>
         <description>Infernal mechanites fuel the firing mechanisms of the hell cannon, producing a highly explosive plasma shot.</description>
         <iconPath>UI/Abilities/Hell_cannon_shot</iconPath>
-        <cooldownTicksRange>200</cooldownTicksRange>
+        <cooldownTicksRange>500</cooldownTicksRange>
         <aiCanUse>true</aiCanUse>
         <!--<warmupStartSound>HB_InfernalBreath_Warmup</warmupStartSound>-->
         <verbProperties>
@@ -79,7 +80,7 @@
             <li Class="HellBionics.CompProperties_AbilityCannonShot">
                 <projectileDef>Bullet_HellCannon</projectileDef>
                 <plasmaCost>15</plasmaCost>
-                <burstCount>1</burstCount>
+                <useCharges>true</useCharges>
             </li>
         </comps>
     </AbilityDef>

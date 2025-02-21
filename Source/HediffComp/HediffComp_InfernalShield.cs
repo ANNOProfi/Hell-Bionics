@@ -1,10 +1,11 @@
-using AthenaFramework;
 using Verse;
 using RimWorld;
+using System;
+using BrokenPlankFramework;
 
 namespace HellBionics
 {
-    public class HediffComp_InfernalShield : AthenaFramework.HediffComp_Shield
+    public class HediffComp_InfernalShield : HediffComp_Shield
     {
         public HediffCompProperties_InfernalShield Props
         {
@@ -24,10 +25,14 @@ namespace HellBionics
 
         public override void CompPostTick(ref float severityAdjustment)
         {
-            if(!(ticksToReset >0) && !(energy >= MaxEnergy) && (InfernalUtility.RemainingPlasma >= (this.Props.plasmaCost*EnergyRechargeRate)))
+            base.CompPostTick(ref severityAdjustment);
+            if(!(ticksToReset > 0) && !(energy >= MaxEnergy) && (InfernalUtility.RemainingPlasma >= (this.Props.plasmaCost*EnergyRechargeRate)+0.1))
             {
                 InfernalUtility.OffsetPlasma(-this.Props.plasmaCost*EnergyRechargeRate);
-                base.CompPostTick(ref severityAdjustment);
+            }
+            else if(!(InfernalUtility.RemainingPlasma >= (this.Props.plasmaCost*EnergyRechargeRate)))
+            {
+                energy = Math.Max(energy - EnergyRechargeRate, 0f);
             }
         }
     }

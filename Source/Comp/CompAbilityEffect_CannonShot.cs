@@ -1,11 +1,12 @@
 using Verse;
 using RimWorld;
-using AthenaFramework;
-using UnityEngine;
+using BrokenPlankFramework;
+using System;
+using Unity.Mathematics;
 
 namespace HellBionics
 {
-    public class CompAbilityEffect_CannonShot : CompAbilityEffect
+    public class CompAbilityEffect_CannonShot : CompAbility_SingularTracker
     {
         //private float cost_temp;
 
@@ -17,7 +18,7 @@ namespace HellBionics
             }
         }
 
-        private Pawn pawn
+        private Pawn Pawn
         {
             get
             {
@@ -25,11 +26,11 @@ namespace HellBionics
             }
         }
 
-        private HediffComp_InfernalUtility infernalUtility
+        private HediffComp_InfernalUtility InfernalUtility
 		{
 			get
 			{
-				return this.pawn.health.hediffSet.GetFirstHediffOfDef(HB_DefOf.HB_InfernalUtility).TryGetComp<HediffComp_InfernalUtility>();
+				return this.Pawn.health.hediffSet.GetFirstHediffOfDef(HB_DefOf.HB_InfernalUtility).TryGetComp<HediffComp_InfernalUtility>();
 			}
 		}
 
@@ -37,24 +38,22 @@ namespace HellBionics
         {
             get
             {
-                return infernalUtility.MaximumPlasma > 0 && infernalUtility.RemainingPlasma >= this.Props.plasmaCost;
+                return InfernalUtility.MaximumPlasma > 0 && InfernalUtility.RemainingPlasma >= this.Props.plasmaCost;
             }
         }
 
         public override bool GizmoDisabled(out string reason)
         {
-            if(infernalUtility.MaximumPlasma == 0)
+            if(InfernalUtility.MaximumPlasma == 0)
             {
                 reason = "No Hediff for this ability. If you are seeing this, something has gone wrong.";
                 return true;
             }
-            if(infernalUtility.RemainingPlasma < this.Props.plasmaCost)
+            if(InfernalUtility.RemainingPlasma < this.Props.plasmaCost)
             {
-                reason = "Not enough Plasma".Translate(pawn);
+                reason = "Not enough Plasma".Translate(Pawn);
                 return true;
             }
-
-
 
             reason = null;
             return false;
@@ -63,7 +62,7 @@ namespace HellBionics
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             base.Apply(target, dest);
-            infernalUtility.OffsetPlasma(-(this.Props.plasmaCost));
+            InfernalUtility.OffsetPlasma(-(this.Props.plasmaCost));
             //for(int i = 0; i< this.Props.burstCount; i++)
             //{
                 this.LaunchProjectile(target);
@@ -78,23 +77,17 @@ namespace HellBionics
 
         public override bool AICanTargetNow(LocalTargetInfo target)
 		{
-			return target.Pawn != null && this.HasEnoughPlasma;
+			return target.Pawn != null && this.HasEnoughPlasma && parent.RemainingCharges > 0;
 		}
 
         /*public override void AddAbility()
         {
             base.AddAbility();
-            this.Props.burstCount = (this.abilityCount+1);
-            this.cost_temp = this.Props.plasmaCost / this.abilityCount;
-            this.Props.plasmaCost = this.cost_temp*(this.abilityCount+1);
         }
 
         public override void RemoveAbility()
         {
             base.RemoveAbility();
-            this.Props.burstCount = (this.abilityCount+1);
-            this.cost_temp = this.Props.plasmaCost / (this.abilityCount+2);
-            this.Props.plasmaCost = this.cost_temp*(this.abilityCount+1);
         }*/
 
         public override void DrawEffectPreview(LocalTargetInfo target)

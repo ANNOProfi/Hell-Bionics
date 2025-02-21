@@ -17,7 +17,7 @@
       <partEfficiency>1.2</partEfficiency>
     </addedPartProps>
     <comps>
-      <li Class="AthenaFramework.HediffCompProperties_GiveSingularAbility">
+      <li Class="BrokenPlankFramework.HediffCompProperties_GiveSingularAbility">
         <abilityDefs>
           <li>HB_InfernalBreath</li>
         </abilityDefs> 

@@ -39,7 +39,7 @@
           </li>
         </tools>
        </li>
-      <li Class="AthenaFramework.HediffCompProperties_GiveSingularAbility">
+      <li Class="BrokenPlankFramework.HediffCompProperties_GiveSingularAbility">
           <abilityDefs>
             <li>HB_HellCannonShot</li>
           </abilityDefs> 

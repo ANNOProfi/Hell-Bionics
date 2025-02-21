@@ -27,8 +27,8 @@
 			<Private>False</Private>
 		</Reference>
 
-		<Reference Include="AthenaFramework">
-			<HintPath>..\..\..\..\..\..\workshop\content\294100\2903359518\1.4\Assemblies\AthenaFramework.dll</HintPath>
+		<Reference Include="BrokenPlankFramework">
+			<HintPath>..\..\..\..\..\..\workshop\content\294100\3431778467\1.5\Assemblies\BrokenPlankFramework.dll</HintPath>
 			<Private>False</Private>
 		</Reference>
 

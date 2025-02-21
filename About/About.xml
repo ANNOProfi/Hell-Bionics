@@ -12,14 +12,13 @@
 
 	<modDependencies>
     <li>
-        <packageId>Smartkar.AthenaFramework</packageId>
-        <displayName>Athena Framework</displayName>
-        <downloadUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2903359518</downloadUrl>
-        <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2903359518</steamWorkshopUrl>
+        <packageId>ANNOProfi.BrokenPlankFramework</packageId>
+        <displayName>Broken Plank Framework</displayName>
     </li>
   </modDependencies>
+
   <loadAfter>
     <li>Ludeon.RimWorld</li>
-    <li>Smartkar.AthenaFramework</li>
+    <li>ANNOProfi.BrokenPlankFramework</li>
   </loadAfter>
 </ModMetaData>

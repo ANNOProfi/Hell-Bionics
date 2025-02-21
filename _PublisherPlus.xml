@@ -2,9 +2,8 @@
 <Configuration>
   <Excluded>
     <exclude>.git</exclude>
-    <exclude>.vs</exclude>
+    <exclude>.vscode</exclude>
     <exclude>About\PublishedFileId.txt</exclude>
-    <exclude>Hell Bionics.code-workspace</exclude>
     <exclude>HellBionics.sln</exclude>
     <exclude>Source</exclude>
   </Excluded>
