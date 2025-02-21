@@ -2,7 +2,7 @@
 
 <Defs>
 
-  <HediffDef ParentName="AddedBodyPartBase">
+  <HediffDef ParentName="HB_InfernalAddedBodyPartBase">
     <defName>HB_InfernalLung</defName>
     <label>infernal lung</label>
     <labelNoun>an infernal lung</labelNoun>
@@ -55,9 +55,6 @@ while conveniently filtering out any toxins that may have found themselves there
       <li>Advanced</li>
 	<li>HB</li>
     </techHediffsTags>
-    <researchPrerequisites>
-      <li>InfernalBionics</li>
-  </researchPrerequisites>
   </ThingDef>
 
   <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">

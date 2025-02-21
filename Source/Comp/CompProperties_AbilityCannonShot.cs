@@ -1,9 +1,10 @@
 using RimWorld;
 using Verse;
+using BrokenPlankFramework;
 
 namespace HellBionics
 {
-	public class CompProperties_AbilityCannonShot : CompProperties_AbilityEffect
+	public class CompProperties_AbilityCannonShot : CompProperties_AbilitySingularTracker
 	{
 		public CompProperties_AbilityCannonShot()
 		{
@@ -12,7 +13,7 @@ namespace HellBionics
 
         public float plasmaCost;
 
-		public int burstCount;
+		//public int burstCount;
 
 		public ThingDef projectileDef;
 	}

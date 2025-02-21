@@ -1,9 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-
-
 <Defs>
 
-<ThingDef Name="HBBodyPartModBase" Abstract="True">
+  <ThingDef Name="HBBodyPartModBase" Abstract="True">
     <thingClass>ThingWithComps</thingClass>
     <category>Item</category>
     <useHitPoints>true</useHitPoints>
@@ -52,6 +50,9 @@
       <skillRequirements>
         <Crafting>10</Crafting>
       </skillRequirements>
+      <researchPrerequisites>
+        <li>InfernalBionics</li>
+      </researchPrerequisites>
       <recipeUsers>
         <li>FabricationBench</li>
       </recipeUsers>

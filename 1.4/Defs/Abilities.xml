@@ -11,10 +11,10 @@
         <verbProperties>
             <verbClass>HellBionics.Verb_CastAbilityInfernalDash</verbClass>
             <warmupTime>0.5</warmupTime>
-            <warmupEffecter>JumpWarmupEffect</warmupEffecter>
+            <warmupEffecter>HB_JumpWarmupEffect</warmupEffecter>
             <requireLineOfSight>true</requireLineOfSight>
             <flightEffecterDef>HB_InfernalDashEffect</flightEffecterDef>
-            <soundLanding>JumpPackLand</soundLanding>
+            <soundLanding>HB_InfernalDashLand</soundLanding>
             <flyWithCarriedThing>true</flyWithCarriedThing>
             <targetParams>
                 <canTargetLocations>true</canTargetLocations>

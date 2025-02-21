@@ -1,6 +1,8 @@
 using UnityEngine;
 using Verse;
 using RimWorld;
+using RimWorld.Utility;
+using System;
 
 namespace HellBionics
 {
@@ -14,7 +16,7 @@ namespace HellBionics
 			}
 		}
 
-		private HediffComp_InfernalUtility infernalUtility
+		private HediffComp_InfernalUtility InfernalUtility
 		{
 			get
 			{
@@ -22,19 +24,29 @@ namespace HellBionics
 			}
 		}
 
-        protected override float EffectiveRange
+        public override float EffectiveRange
 		{
 			get
 			{
-	
-				return infernalUtility.InfernalDashRange;
+				if(InfernalUtility.dashCount == 0 || InfernalUtility.dashCount == 1)
+				{
+					return InfernalUtility.InfernalDashRange;
+				}
 				
+				//Log.Message("HB Message: Range: "+InfernalUtility.InfernalDashRange+", extended range: "+InfernalUtility.InfernalDashRange*Math.Min(InfernalUtility.dashCount*(int)(InfernalUtility.RemainingPlasma/InfernalUtility.dashCost), InfernalUtility.dashCount));
+				//Log.Message("HB Message: dashCount: "+InfernalUtility.dashCount+", adapted dashCount: "+Math.Min((int)(InfernalUtility.RemainingPlasma/InfernalUtility.dashCost), InfernalUtility.dashCount));
+				return InfernalUtility.InfernalDashRange*Math.Min((int)(InfernalUtility.RemainingPlasma/InfernalUtility.dashCost), InfernalUtility.dashCount);
+				//}
+				/*else
+				{
+					return InfernalUtility.InfernalDashRange*InfernalUtility.dashCount;
+				}*/
 			}
 		}
 
         protected override bool TryCastShot()
 		{
-			return base.TryCastShot() && HB_JumpUtility.DoJump(this.CasterPawn, this.currentTarget, base.ReloadableCompSource, this.verbProps);
+			return base.TryCastShot() && HB_JumpUtility.DoJump(this.CasterPawn, this.currentTarget, this.verbProps);
 		}
 
         public override void OnGUI(LocalTargetInfo target)

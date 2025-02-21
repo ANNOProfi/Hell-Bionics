@@ -9,7 +9,7 @@ namespace HellBionics
 
     public class HB_PawnDasher : HB_PawnFlyer
     {
-        private Material cachedShadowMaterial;
+        //private Material cachedShadowMaterial;
 
         private static readonly Func<float, float> FlightSpeed;
 
@@ -27,18 +27,6 @@ namespace HellBionics
 
         private Vector3 lastPos;
 
-        private Material ShadowMaterial
-        {
-            get
-            {
-                if(this.cachedShadowMaterial == null && !this.def.pawnFlyer.shadow.NullOrEmpty())
-                {
-                    this.cachedShadowMaterial = MaterialPool.MatFrom(this.def.pawnFlyer.shadow, ShaderDatabase.Transparent);
-                }
-                return this.cachedShadowMaterial;
-            }
-        }
-
         static HB_PawnDasher()
         {
             AnimationCurve animationCurve = new AnimationCurve();
@@ -52,15 +40,15 @@ namespace HellBionics
 		{
 			get
 			{
-				this.RecomputePosition();
+				//this.RecomputePosition();
 				return this.effectivePos;
 			}
 		}
 
-        protected override bool ValidateFlyer()
+        /*protected override bool ValidateFlyer()
         {
             return base.ValidateFlyer();
-        }
+        }*/
 
         private void RecomputePosition()
         {
@@ -83,29 +71,43 @@ namespace HellBionics
 			this.effectivePos = this.groundPos + b + b2;
         }
 
-        public override void DrawAt(Vector3 drawLoc, bool flip = false)
+        public override void DynamicDrawPhaseAt(DrawPhase phase, Vector3 drawLoc, bool flip = false)
+        {
+            RecomputePosition();
+			if (FlyingPawn != null)
+			{
+				FlyingPawn.DynamicDrawPhaseAt(phase, effectivePos);
+			}
+			else
+			{
+				FlyingThing?.DynamicDrawPhaseAt(phase, effectivePos);
+			}
+			if (phase == DrawPhase.Draw)
+			{
+				DrawAt(effectivePos, flip);
+			}
+        }
+
+        protected override void DrawAt(Vector3 drawLoc, bool flip = false)
 		{
-			this.RecomputePosition();
 			this.DrawShadow(this.groundPos, this.effectiveHeight);
-			base.FlyingPawn.DrawAt(this.effectivePos, flip);
 			if (base.CarriedThing != null)
 			{
-				PawnRenderer.DrawCarriedThing(base.FlyingPawn, this.effectivePos, base.CarriedThing);
+				PawnRenderUtility.DrawCarriedThing(base.FlyingPawn, this.effectivePos, base.CarriedThing);
 			}
 		}
 
         private void DrawShadow(Vector3 drawLoc, float height)
 		{
-			Material shadowMaterial = this.ShadowMaterial;
-			if (shadowMaterial == null)
+			Material shadowMaterial = this.def.pawnFlyer.ShadowMaterial;
+			if (!(shadowMaterial == null))
 			{
-				return;
+				float num = Mathf.Lerp(1f, 0.6f, 0f);
+				Vector3 s = new Vector3(num, 1f, num);
+				Matrix4x4 matrix = default(Matrix4x4);
+				matrix.SetTRS(drawLoc, Quaternion.identity, s);
+				Graphics.DrawMesh(MeshPool.plane10, matrix, shadowMaterial, 0);
 			}
-			float num = Mathf.Lerp(1f, 0.6f, 0);
-			Vector3 s = new Vector3(num, 1f, 0);
-			Matrix4x4 matrix = default(Matrix4x4);
-			matrix.SetTRS(drawLoc, Quaternion.identity, s);
-			Graphics.DrawMesh(MeshPool.plane10, matrix, shadowMaterial, 0);
 		}
 
         protected override void RespawnPawn()

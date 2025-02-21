@@ -3,7 +3,7 @@
 
 <Defs>
 
-  <HediffDef ParentName="AddedBodyPartBase">
+  <HediffDef ParentName="HB_InfernalAddedBodyPartBase">
     <defName>HB_InfernalArm</defName>
     <label>infernal arm</label>
     <labelNoun>an infernal arm</labelNoun>
@@ -72,8 +72,8 @@
     <label>infernal arm</label>
     <description>A bionic arm, that has been changed by long exposure to infernal mechanites. 
 
-Despite it's appearance as a regular bionic arm, this prosthetic can use it's infernal mechanites to heat up it's knuckles and claws for additional damage, 
-while still retaining the benefits of it's unmodified counterpart.</description>
+Despite its appearance as a regular bionic arm, this prosthetic can use its infernal mechanites to heat up its knuckles and claws for additional damage, 
+while still retaining the benefits of its unmodified counterpart.</description>
 	  <graphicData>
 			<texPath>Things/Item/BodyPart/Hellbionic_empty</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -92,9 +92,6 @@ while still retaining the benefits of it's unmodified counterpart.</description>
       <li>Advanced</li>
 	<li>HB</li>
     </techHediffsTags>
-    <researchPrerequisites>
-      <li>InfernalBionics</li>
-  </researchPrerequisites>
   </ThingDef>
 
   <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">

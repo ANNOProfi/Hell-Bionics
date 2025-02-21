@@ -3,12 +3,12 @@
 
 <Defs>
 
-  <HediffDef ParentName="AddedBodyPartBase">
+  <HediffDef ParentName="HB_InfernalAddedBodyPartBase">
     <defName>HB_InfernalHeart</defName>
     <label>infernal heart</label>
     <labelNoun>an infernal heart</labelNoun>
     <description>An installed infernal heart.</description>
-    <descriptionHyperlinks><ThingDef>HB_InfernalJaw</ThingDef></descriptionHyperlinks>
+    <descriptionHyperlinks><ThingDef>HB_InfernalHeart</ThingDef></descriptionHyperlinks>
     <spawnThingOnRemoved>HB_InfernalHeart</spawnThingOnRemoved>
     <defaultLabelColor>(1.0, 0.5, 0)</defaultLabelColor>
     <addedPartProps>
@@ -48,9 +48,6 @@ The infernal mechanites use this heart to transport the plasma, that they genera
       <li>Advanced</li>
 	<li>HB</li>
     </techHediffsTags>
-    <researchPrerequisites>
-      <li>InfernalBionics</li>
-  </researchPrerequisites>
   </ThingDef>
 
   <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">

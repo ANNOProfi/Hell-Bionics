@@ -3,12 +3,12 @@
 
 <Defs>
 
-  <HediffDef ParentName="AddedBodyPartBase">
+  <HediffDef ParentName="HB_InfernalAddedBodyPartBase">
     <defName>HB_DemonicEye</defName>
     <label>demonic eye</label>
     <labelNoun>a demonic eye</labelNoun>
     <description>An installed demonic eye.</description>
-    <descriptionHyperlinks><ThingDef>HB_InfernalJaw</ThingDef></descriptionHyperlinks>
+    <descriptionHyperlinks><ThingDef>HB_DemonicEye</ThingDef></descriptionHyperlinks>
     <spawnThingOnRemoved>HB_DemonicEye</spawnThingOnRemoved>
     <defaultLabelColor>(1.0, 0.5, 0)</defaultLabelColor>
     <addedPartProps>
@@ -32,7 +32,7 @@
 The transformation process has rendered this eye better than that of a human. 
 However, the most obvious change is cosmetic in nature, as the sclera has become pitch black, the pupil, slitted and the iris is glowing a burning orange.</description>
 	  <graphicData>
-			<texPath>Things/Item/BodyPart/Hellbionic_empty</texPath>
+			<texPath>Things/Item/BodyPart/Demonic_eye</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
     <descriptionHyperlinks><RecipeDef>HB_InstallDemonicEye</RecipeDef></descriptionHyperlinks>
@@ -45,13 +45,10 @@ However, the most obvious change is cosmetic in nature, as the sclera has become
       <Mass>0.4</Mass>
 	    <MarketValue>2000</MarketValue>
     </statBases>
-	    <techHediffsTags>
+    <techHediffsTags>
       <li>Advanced</li>
-	<li>HB</li>
+	    <li>HB</li>
     </techHediffsTags>
-    <researchPrerequisites>
-        <li>InfernalBionics</li>
-    </researchPrerequisites>
   </ThingDef>
 
   <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">

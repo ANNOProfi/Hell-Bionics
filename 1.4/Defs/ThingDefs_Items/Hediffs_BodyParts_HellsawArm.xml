@@ -3,7 +3,7 @@
 
 <Defs>
 
-  <HediffDef ParentName="AddedBodyPartBase">
+  <HediffDef ParentName="HB_InfernalAddedBodyPartBase">
     <defName>HB_HellsawArm</defName>
     <label>hellsaw arm</label>
     <labelNoun>a hellsaw arm</labelNoun>
@@ -58,7 +58,7 @@
     <label>hellsaw arm</label>
     <description>A forearm mounted chainsaw, that has been changed by long exposure to infernal mechanites. 
 
-Through it's plasma coated blade, it enhances the melee abilities of the user even further, at the cost of the plantworking benefits. 
+Through its plasma coated blade, it enhances the melee abilities of the user even further, at the cost of the plantworking benefits. 
 Ironically, the heat of the blades makes the user more suited for cutting through stone. 
 
 The blade is partially retractable while deavtivated, 
@@ -81,9 +81,6 @@ but the fine motor manipulation of the user will still decrease, because, in cas
       <li>Advanced</li>
 	<li>HB</li>
     </techHediffsTags>
-    <researchPrerequisites>
-      <li>InfernalBionics</li>
-  </researchPrerequisites>
   </ThingDef>
 
   <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">

@@ -3,7 +3,7 @@
 
 <Defs>
 
-  <HediffDef ParentName="AddedBodyPartBase">
+  <HediffDef ParentName="HB_InfernalAddedBodyPartBase">
     <defName>HB_InfernalJaw</defName>
     <label>infernal jaw</label>
     <labelNoun>an infernal jaw</labelNoun>
@@ -17,7 +17,7 @@
 	    <betterThanNatural>true</betterThanNatural>
     </addedPartProps>
     <comps>
-      <li Class="AthenaFramework.HediffCompProperties_GiveSingularAbility">
+      <li Class="BrokenPlankFramework.HediffCompProperties_GiveSingularAbility">
         <abilityDefs>
           <li>HB_InfernalBreath</li>
         </abilityDefs> 
@@ -66,9 +66,6 @@ Additionally, the infernal mechanites in the user's system can accumulate their 
       <li>Advanced</li>
 	<li>HB</li>
     </techHediffsTags>
-    <researchPrerequisites>
-      <li>InfernalBionics</li>
-  </researchPrerequisites>
   </ThingDef>
 
   <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">

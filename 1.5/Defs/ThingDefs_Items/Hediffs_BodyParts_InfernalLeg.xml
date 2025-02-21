@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HediffDef ParentName="HB_InfernalAddedBodyPartBase">
+    <defName>HB_InfernalLeg</defName>
+    <label>infernal leg</label>
+    <labelNoun>an infernal leg</labelNoun>
+    <description>An installed infernal leg.</description>
+    <descriptionHyperlinks><ThingDef>HB_InfernalLeg</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>HB_InfernalLeg</spawnThingOnRemoved>
+    <defaultLabelColor>(1.0, 0.5, 0)</defaultLabelColor>
+    <addedPartProps>
+      <solid>true</solid>
+      <betterThanNatural>true</betterThanNatural>
+      <partEfficiency>1.50</partEfficiency>
+    </addedPartProps>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>infernal kick</label>
+            <capacities>
+              <li>Blunt</li>
+            </capacities>
+            <power>30</power>
+            <cooldownTime>3</cooldownTime>
+            <armorPenetration>0.45</armorPenetration>
+            <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+            <extraMeleeDamages>
+              <li>
+                <def>Burn</def>
+                <amount>6</amount>
+                <chance>100</chance>
+              </li>
+            </extraMeleeDamages>
+          </li>
+        </tools>
+      </li>
+      <li Class="BrokenPlankFramework.HediffCompProperties_GiveSingularAbility">
+        <abilityDefs>
+          <li>HB_InfernalDash</li>
+        </abilityDefs> 
+      </li>
+      <li Class="HellBionics.HediffCompProperties_Plasma">
+        <plasmaPerTick>0.01</plasmaPerTick>
+        <maximumBase>10</maximumBase>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <ThingDef ParentName="HB_BASE">
+    <defName>HB_InfernalLeg</defName>
+    <label>infernal leg</label>
+    <description>A bionic leg, that has been changed by long exposure to infernal mechanites.
+
+The transformation process has changed this leg from that of a human, to a digitigrade one, resembling that of a goat, increasing the user's speed.
+
+Additionally, the infernal mechanites contained within can use their stored plasma to propel the user forward, leaving a burning path in their wake.</description>
+    <graphicData>
+			<texPath>Things/Item/BodyPart/Infernal_leg</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+    <descriptionHyperlinks><RecipeDef>HB_InstallInfernalLeg</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Plasteel>80</Plasteel>
+      <ComponentSpacer>6</ComponentSpacer>
+    </costList>
+	  <tickerType>Normal</tickerType>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+    <statBases>
+      <Mass>8</Mass>
+	    <MarketValue>2000</MarketValue>
+    </statBases>
+    <techHediffsTags>
+      <li>Advanced</li>
+	    <li>HB</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>HB_InstallInfernalLeg</defName>
+    <label>install infernal leg</label>
+    <description>Install an infernal leg.</description>
+    <descriptionHyperlinks>
+      <ThingDef>HB_InfernalLeg</ThingDef>
+      <HediffDef>HB_InfernalLeg</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing infernal leg.</jobString>
+		<workAmount>4000</workAmount>
+    <uiIconThing>HB_InfernalLeg</uiIconThing>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>HB_InfernalLeg</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>HB_InfernalLeg</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Leg</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>HB_InfernalLeg</addsHediff>
+	</RecipeDef>
+</Defs>

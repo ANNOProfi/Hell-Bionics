@@ -2,7 +2,7 @@
 
 <Defs>
 
-  <HediffDef ParentName="AddedBodyPartBase">
+  <HediffDef ParentName="HB_InfernalAddedBodyPartBase">
     <defName>HB_ReaperBlade</defName>
     <label>reaper blade</label>
     <labelNoun>a reaper blade</labelNoun>
@@ -63,7 +63,7 @@ A prosthetic born out of necessetiy or desperation, the reaper blade is the arm 
 
 Obviously, trying to grab something with a literal scythe for an arm is next to impossible, so any work, other than melee combat and farming is off the table for users of this arm.</description>
 	  <graphicData>
-			<texPath>Things/Item/BodyPart/Hellbionic_empty</texPath>
+			<texPath>Things/Item/BodyPart/Reaper_blade</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
     <descriptionHyperlinks><RecipeDef>HB_InstallReaperBlade</RecipeDef></descriptionHyperlinks>
@@ -76,13 +76,10 @@ Obviously, trying to grab something with a literal scythe for an arm is next to 
       <Mass>0.4</Mass>
 	    <MarketValue>2000</MarketValue>
     </statBases>
-	    <techHediffsTags>
+    <techHediffsTags>
       <li>Advanced</li>
-	<li>HB</li>
+	    <li>HB</li>
     </techHediffsTags>
-    <researchPrerequisites>
-        <li>InfernalBionics</li>
-    </researchPrerequisites>
   </ThingDef>
 
   <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">

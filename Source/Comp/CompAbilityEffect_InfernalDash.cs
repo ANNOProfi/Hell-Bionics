@@ -1,12 +1,11 @@
 using Verse;
 using RimWorld;
-using AthenaFramework;
+using BrokenPlankFramework;
 
 namespace HellBionics
 {
     public class CompAbilityEffect_InfernalDash : CompAbility_SingularTracker
     {
-        private float range_temp;
 
         private new CompProperties_AbilityInfernalDash Props
         {
@@ -16,7 +15,7 @@ namespace HellBionics
             }
         }
 
-        private Pawn pawn
+        private Pawn Pawn
         {
             get
             {
@@ -24,11 +23,11 @@ namespace HellBionics
             }
         }
 
-        private HediffComp_InfernalUtility infernalUtility
+        private HediffComp_InfernalUtility InfernalUtility
 		{
 			get
 			{
-				return this.pawn.health.hediffSet.GetFirstHediffOfDef(HB_DefOf.HB_InfernalUtility).TryGetComp<HediffComp_InfernalUtility>();
+				return Pawn.health.hediffSet.GetFirstHediffOfDef(HB_DefOf.HB_InfernalUtility).TryGetComp<HediffComp_InfernalUtility>();
 			}
 		}
 
@@ -36,50 +35,46 @@ namespace HellBionics
         {
             get
             {
-                return infernalUtility.MaximumPlasma > 0 && infernalUtility.RemainingPlasma >= this.Props.plasmaCost;
+                return InfernalUtility.MaximumPlasma > 0 && InfernalUtility.RemainingPlasma >= this.Props.plasmaCost;
             }
         }
 
         public override void AddAbility()
         {
             base.AddAbility();
-            this.range_temp = this.Props.range / this.abilityCount;
-            adjustRange();
+            InfernalUtility.dashCount = this.abilityCount+1;
+            if(!InfernalUtility.dashInitialised)
+            {
+                InfernalUtility.InfernalDashRange = Props.range;
+                InfernalUtility.dashCost = Props.plasmaCost;
+                InfernalUtility.dashInitialised = true;
+            }
         }
 
         public override void RemoveAbility()
         {
             base.RemoveAbility();
-            this.range_temp = this.Props.range / (this.abilityCount+2);
-            adjustRange();
-        }
-
-        public void adjustRange()
-        {
-            this.Props.range = this.range_temp*(this.abilityCount+1);
-            infernalUtility.InfernalDashRange = this.Props.range;
+            InfernalUtility.dashCount = this.abilityCount+1;
         }
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             base.Apply(target, dest);
-            infernalUtility.OffsetPlasma(-(this.Props.plasmaCost));
+            InfernalUtility.OffsetPlasma(-(this.Props.plasmaCost*((int)(Pawn.Position.DistanceTo(target.CenterVector3.ToIntVec3())/Props.range)+1)));
         }
 
         public override bool GizmoDisabled(out string reason)
         {
-            if(infernalUtility.MaximumPlasma == 0)
+            if(InfernalUtility.MaximumPlasma == 0)
             {
                 reason = "No Hediff for this ability. If you are seeing this, something has gone wrong.";
                 return true;
             }
-            if(infernalUtility.RemainingPlasma < this.Props.plasmaCost)
+            if(InfernalUtility.RemainingPlasma < this.Props.plasmaCost)
             {
-                reason = "Not enough Plasma".Translate(pawn);
+                reason = "Not enough Plasma".Translate(Pawn);
                 return true;
             }
-
-
 
             reason = null;
             return false;

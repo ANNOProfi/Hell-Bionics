@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<Defs>
+
+  <HediffDef ParentName="HB_InfernalAddedBodyPartBase">
+    <defName>HB_InfernalJaw</defName>
+    <label>infernal jaw</label>
+    <labelNoun>an infernal jaw</labelNoun>
+    <description>An installed infernal jaw.</description>
+    <descriptionHyperlinks><ThingDef>HB_InfernalJaw</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>HB_InfernalJaw</spawnThingOnRemoved>
+    <defaultLabelColor>(1.0, 0.5, 0)</defaultLabelColor>
+    <addedPartProps>
+      <solid>true</solid>
+	    <betterThanNatural>true</betterThanNatural>
+      <partEfficiency>1.2</partEfficiency>
+    </addedPartProps>
+    <comps>
+      <li Class="BrokenPlankFramework.HediffCompProperties_GiveSingularAbility">
+        <abilityDefs>
+          <li>HB_InfernalBreath</li>
+        </abilityDefs> 
+      </li>
+      <li Class="HellBionics.HediffCompProperties_Plasma">
+        <plasmaPerTick>0.01</plasmaPerTick>
+        <maximumBase>5</maximumBase>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <statOffsets>
+        <SocialImpact>-0.30</SocialImpact>
+        <TradePriceImprovement>0.10</TradePriceImprovement>
+        <ArrestSuccessChance>0.30</ArrestSuccessChance>
+        <NegotiationAbility>-0.50</NegotiationAbility>
+        <ToxicEnvironmentResistance>0.3</ToxicEnvironmentResistance>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="HB_BASE">
+    <defName>HB_InfernalJaw</defName>
+    <label>infernal jaw</label>
+    <description>A bionic jaw, that has been changed by long exposure to infernal mechanites.
+
+Despite being a replacement jaw, it covers the user's face up over the nose, filtering out airborne toxins, while morphing the face into a demonic snarl.
+
+Additionally, the infernal mechanites in the user's system can accumulate their stored plasma in their mouth, to be expelled in a fiery blast.</description>
+	  <graphicData>
+			<texPath>Things/Item/BodyPart/Infernal_jaw</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+    <descriptionHyperlinks><RecipeDef>HB_InstallInfernalJaw</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Plasteel>80</Plasteel>
+      <ComponentSpacer>6</ComponentSpacer>
+    </costList>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+    <statBases>
+      <Mass>0.4</Mass>
+	    <MarketValue>2000</MarketValue>
+    </statBases>
+    <techHediffsTags>
+      <li>Advanced</li>
+	    <li>HB</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>HB_InstallInfernalJaw</defName>
+    <label>install infernal jaw</label>
+    <description>Install an infernal jaw.</description>
+    <descriptionHyperlinks>
+      <ThingDef>HB_InfernalJaw</ThingDef>
+      <HediffDef>HB_InfernalJaw</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing infernal jaw.</jobString>
+		<workAmount>4000</workAmount>
+    <uiIconThing>HB_InfernalJaw</uiIconThing>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>HB_InfernalJaw</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>HB_InfernalJaw</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Jaw</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>HB_InfernalJaw</addsHediff>
+	</RecipeDef>
+</Defs>

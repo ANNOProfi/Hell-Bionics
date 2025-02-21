@@ -6,17 +6,19 @@
     <packageId>ANNOProfi.HellBionics</packageId>
 	<supportedVersions>
 		<li>1.4</li>
+    <li>1.5</li>
 	</supportedVersions>
 	<description>Some variations of regular Bionics, with focus on fire, plasma and generally a doomlike hell theme.</description>
 
 	<modDependencies>
     <li>
-        <packageId>Smartkar.AthenaFramework</packageId>
-        <displayName>Athena Framework</displayName>
+        <packageId>ANNOProfi.BrokenPlankFramework</packageId>
+        <displayName>Broken Plank Framework</displayName>
     </li>
   </modDependencies>
+
   <loadAfter>
     <li>Ludeon.RimWorld</li>
-    <li>Smartkar.AthenaFramework</li>
+    <li>ANNOProfi.BrokenPlankFramework</li>
   </loadAfter>
 </ModMetaData>

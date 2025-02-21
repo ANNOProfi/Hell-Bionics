@@ -2,7 +2,7 @@
 
 <Defs>
 
-  <HediffDef ParentName="AddedBodyPartBase">
+  <HediffDef ParentName="HB_InfernalAddedBodyPartBase">
     <defName>HB_InfernalStomach</defName>
     <label>infernal stomach</label>
     <labelNoun>an infernal stomach</labelNoun>
@@ -48,13 +48,10 @@ The stomach is the main storage point for the plasma, that the infernal mechanit
       <Mass>0.4</Mass>
 	    <MarketValue>2000</MarketValue>
     </statBases>
-	    <techHediffsTags>
+    <techHediffsTags>
       <li>Advanced</li>
-	<li>HB</li>
+	    <li>HB</li>
     </techHediffsTags>
-    <researchPrerequisites>
-        <li>InfernalBionics</li>
-    </researchPrerequisites>
   </ThingDef>
 
   <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
