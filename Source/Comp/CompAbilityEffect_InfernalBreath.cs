@@ -44,12 +44,12 @@ namespace HellBionics
 
         public override bool GizmoDisabled(out string reason)
         {
-            if(InfernalUtility.MaximumPlasma == 0)
+            if(InfernalUtility?.MaximumPlasma == 0)
             {
                 reason = "No Hediff for this ability. If you are seeing this, something has gone wrong.";
                 return true;
             }
-            if(InfernalUtility.RemainingPlasma < Props.plasmaCost)
+            if(InfernalUtility?.RemainingPlasma < Props.plasmaCost)
             {
                 reason = "Not enough Plasma".Translate(Pawn);
                 return true;
@@ -68,7 +68,17 @@ namespace HellBionics
 			IntVec3 position = this.parent.pawn.Position;
 			float num = Mathf.Atan2((float)(-(float)(target.Cell.z - position.z)), (float)(target.Cell.x - position.x)) * 57.29578f;
 			FloatRange value = new FloatRange(num - 10f, num + 10f);
-			GenExplosion.DoExplosion(position, this.parent.pawn.MapHeld, this.Props.range, DamageDefOf.Flame, Pawn, -1, -1f, null, null, null, null, null, 1f, 1, null, false, null, 0f, 1, 1f, false, null, null, new FloatRange?(value), false, 0.6f, 0f, false, null, 1f);
+			
+			IntVec3 cell = target.Cell;
+			Map mapHeld = parent.pawn.MapHeld;
+			DamageDef flame = DamageDefOf.Flame;
+			Pawn pawn = Pawn;
+			ThingDef filthDef = null;
+			int damAmount = -1;
+			SimpleCurve flammabilityAttachFireChanceCurve = parent.verb.verbProps.flammabilityAttachFireChanceCurve;
+			List<IntVec3> overrideCells = AffectedCells(target);
+
+			GenExplosion.DoExplosion(cell, mapHeld, 0f, flame, pawn, damAmount, -1f, null, null, null, null, filthDef, 1f, 1, null, null, 255, applyDamageToExplosionCellsNeighbors: false, null, 0f, 1, 1f, damageFalloff: false, null, null, null, doVisualEffects: false, 0.6f, 0f, doSoundEffects: false, null, 1f, flammabilityAttachFireChanceCurve, overrideCells);
 			base.Apply(target, dest);
 		}
 

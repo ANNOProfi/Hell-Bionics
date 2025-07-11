@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+    <ThingDef ParentName="PawnFlyerBase">
+		<defName>HB_PawnDasher</defName>
+		<thingClass>HellBionics.HB_PawnDasher</thingClass>
+		<pawnFlyer>
+			<flightDurationMin>0.5</flightDurationMin>
+			<flightSpeed>15</flightSpeed>
+		</pawnFlyer>
+	</ThingDef>
+</Defs>

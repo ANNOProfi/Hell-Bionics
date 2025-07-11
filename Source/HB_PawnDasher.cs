@@ -116,7 +116,7 @@ namespace HellBionics
 			base.RespawnPawn();
 		}
 
-        public override void Tick()
+        protected override void Tick()
 		{
 			this.RecomputePosition();
 			if (this.flightEffecter == null && this.flightEffecterDef != null)

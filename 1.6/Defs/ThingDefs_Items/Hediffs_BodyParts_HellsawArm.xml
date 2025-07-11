@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<Defs>
+
+  <HediffDef ParentName="HB_InfernalAddedBodyPartBase">
+    <defName>HB_HellsawArm</defName>
+    <label>hellsaw arm</label>
+    <labelNoun>a hellsaw arm</labelNoun>
+    <description>An installed hellsaw arm.</description>
+    <descriptionHyperlinks><ThingDef>HB_HellsawArm</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>HB_HellsawArm</spawnThingOnRemoved>
+    <defaultLabelColor>(1.0, 0.5, 0)</defaultLabelColor>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.90</partEfficiency>
+	  <isGoodWeapon>true</isGoodWeapon>
+	  <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+			 <comps>
+         <li Class="HediffCompProperties_VerbGiver">
+          <tools>
+            <li>
+              <label>hellsaw slash</label>
+              <capacities>
+                <li>Cut</li>
+              </capacities>
+              <power>20</power>
+              <cooldownTime>1</cooldownTime>
+              <armorPenetration>0.5</armorPenetration>
+              <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+              <extraMeleeDamages>
+                <li>
+                  <def>Burn</def>
+                  <amount>6</amount>
+                  <chance>100</chance>
+                </li>
+              </extraMeleeDamages>
+            </li>
+          </tools>
+         </li>
+         <li Class="HellBionics.HediffCompProperties_Plasma">
+          <plasmaPerTick>-0.001</plasmaPerTick>
+          <maximumBase>1</maximumBase>
+          </li>
+        </comps>
+    <stages>
+      <li>
+        <statOffsets>
+          <MiningSpeed>0.40</MiningSpeed>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="HB_BASE">
+    <defName>HB_HellsawArm</defName>
+    <label>hellsaw arm</label>
+    <description>A forearm mounted chainsaw, that has been changed by long exposure to infernal mechanites. 
+
+Through its plasma coated blade, it enhances the melee abilities of the user even further, at the cost of the plantworking benefits. 
+Ironically, the heat of the blades makes the user more suited for cutting through stone. 
+
+The blade is partially retractable while deavtivated, 
+but the fine motor manipulation of the user will still decrease, because, in case you haven't noticed, they've got chainsaws for hands.</description>
+	  <graphicData>
+			<texPath>Things/Item/BodyPart/Hellsaw_arm</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+    <descriptionHyperlinks><RecipeDef>HB_InstallHellsawArm</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Plasteel>80</Plasteel>
+      <ComponentSpacer>6</ComponentSpacer>
+    </costList>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+    <statBases>
+      <Mass>0.4</Mass>
+	    <MarketValue>2000</MarketValue>
+    </statBases>
+    <techHediffsTags>
+      <li>Advanced</li>
+	    <li>HB</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>HB_InstallHellsawArm</defName>
+    <label>install hellsaw arm</label>
+    <description>Install a hellsaw arm.</description>
+    <descriptionHyperlinks>
+      <ThingDef>HB_HellsawArm</ThingDef>
+      <HediffDef>HB_HellsawArm</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing hellsaw arm.</jobString>
+		<workAmount>4000</workAmount>
+    <uiIconThing>HB_HellsawArm</uiIconThing>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>HB_HellsawArm</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>HB_HellsawArm</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Shoulder</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>HB_HellsawArm</addsHediff>
+	</RecipeDef>
+</Defs>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<Defs>
+
+  <HediffDef ParentName="HB_InfernalAddedBodyPartBase">
+    <defName>HB_InfernalHeart</defName>
+    <label>infernal heart</label>
+    <labelNoun>an infernal heart</labelNoun>
+    <description>An installed infernal heart.</description>
+    <descriptionHyperlinks><ThingDef>HB_InfernalHeart</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>HB_InfernalHeart</spawnThingOnRemoved>
+    <defaultLabelColor>(1.0, 0.5, 0)</defaultLabelColor>
+    <addedPartProps>
+      <solid>true</solid>
+	    <betterThanNatural>true</betterThanNatural>
+      <partEfficiency>1.2</partEfficiency>
+    </addedPartProps>
+    <comps>
+      <li Class="HellBionics.HediffCompProperties_Plasma">
+        <plasmaPerTick>0.1</plasmaPerTick>
+        <maximumBase>5</maximumBase>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <ThingDef ParentName="HB_BASE">
+    <defName>HB_InfernalHeart</defName>
+    <label>infernal heart</label>
+    <description>A bionic heart, that has been changed by long exposure to infernal mechanites.
+
+The infernal mechanites use this heart to transport the plasma, that they generate, to all other parts that require it, at vastly increased speeds.</description>
+	  <graphicData>
+			<texPath>Things/Item/BodyPart/Hellbionic_empty</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+    <descriptionHyperlinks><RecipeDef>HB_InstallInfernalHeart</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Plasteel>80</Plasteel>
+      <ComponentSpacer>6</ComponentSpacer>
+    </costList>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+    <statBases>
+      <Mass>0.4</Mass>
+	    <MarketValue>2000</MarketValue>
+    </statBases>
+    <techHediffsTags>
+      <li>Advanced</li>
+	    <li>HB</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>HB_InstallInfernalHeart</defName>
+    <label>install infernal heart</label>
+    <description>Install an infernal heart.</description>
+    <descriptionHyperlinks>
+      <ThingDef>HB_InfernalHeart</ThingDef>
+      <HediffDef>HB_InfernalHeart</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing infernal heart.</jobString>
+		<workAmount>4000</workAmount>
+    <uiIconThing>HB_InfernalHeart</uiIconThing>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>HB_InfernalHeart</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>HB_InfernalHeart</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Heart</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>HB_InfernalHeart</addsHediff>
+	</RecipeDef>
+</Defs>

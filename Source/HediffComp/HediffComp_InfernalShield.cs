@@ -7,7 +7,7 @@ namespace HellBionics
 {
     public class HediffComp_InfernalShield : HediffComp_Shield
     {
-        public HediffCompProperties_InfernalShield Props
+        public new HediffCompProperties_InfernalShield Props
         {
             get
             {

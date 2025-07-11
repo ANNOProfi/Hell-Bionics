@@ -33,7 +33,7 @@ namespace HellBionics
         public static void OrderJump(Pawn pawn, LocalTargetInfo target, Verb verb, float range)
 		{
 			Map map = pawn.Map;
-			IntVec3 intVec = RCellFinder.BestOrderedGotoDestNear(target.Cell, pawn, (IntVec3 c) => JumpUtility.ValidJumpTarget(map, c) && JumpUtility.CanHitTargetFrom(pawn, pawn.Position, c, range));
+			IntVec3 intVec = RCellFinder.BestOrderedGotoDestNear(target.Cell, pawn, (IntVec3 c) => JumpUtility.ValidJumpTarget(pawn, map, c) && JumpUtility.CanHitTargetFrom(pawn, pawn.Position, c, range));
 			Job job = JobMaker.MakeJob(JobDefOf.CastJump, intVec);
 			job.verbToUse = verb;
 			if (pawn.jobs.TryTakeOrderedJob(job, new JobTag?(JobTag.Misc), false))

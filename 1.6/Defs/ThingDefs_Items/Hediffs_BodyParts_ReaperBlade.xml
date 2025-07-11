@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <HediffDef ParentName="HB_InfernalAddedBodyPartBase">
+    <defName>HB_ReaperBlade</defName>
+    <label>reaper blade</label>
+    <labelNoun>a reaper blade</labelNoun>
+    <description>An installed reaper blade.</description>
+    <descriptionHyperlinks><ThingDef>HB_ReaperBlade</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>HB_ReaperBlade</spawnThingOnRemoved>
+    <defaultLabelColor>(1.0, 0.5, 0)</defaultLabelColor>
+    <addedPartProps>
+      <solid>true</solid>
+	    <isGoodWeapon>true</isGoodWeapon>
+	    <betterThanNatural>false</betterThanNatural>
+      <partEfficiency>0.50</partEfficiency>
+    </addedPartProps>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>reaper slash</label>
+            <capacities>
+              <li>Cut</li>
+            </capacities>
+            <power>20</power>
+            <cooldownTime>1</cooldownTime>
+            <armorPenetration>0.5</armorPenetration>
+            <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+            <extraMeleeDamages>
+              <li>
+                <def>Burn</def>
+                <amount>6</amount>
+                <chance>100</chance>
+              </li>
+            </extraMeleeDamages>
+          </li>
+        </tools>
+      </li>
+      <li Class="HellBionics.HediffCompProperties_Plasma">
+        <plasmaPerTick>-0.001</plasmaPerTick>
+        <maximumBase>1</maximumBase>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <statOffsets>
+            <WorkSpeedGlobal>-0.5</WorkSpeedGlobal>
+            <MeleeHitChance>+3</MeleeHitChance>
+            <PlantWorkSpeed>0.5</PlantWorkSpeed>
+            <PlantHarvestYield>-0.25</PlantHarvestYield>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="HB_BASE">
+    <defName>HB_ReaperBlade</defName>
+    <label>reaper blade</label>
+    <description>A salvaged scyther arm, that has been changed by long exposure to infernal mechanites. 
+
+A prosthetic born out of necessetiy or desperation, the reaper blade is the arm of a scyther, who's blade the infernal mechanites are able to heat up for additional damage.
+
+Obviously, trying to grab something with a literal scythe for an arm is next to impossible, so any work, other than melee combat and farming is off the table for users of this arm.</description>
+	  <graphicData>
+			<texPath>Things/Item/BodyPart/Reaper_blade</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+    <descriptionHyperlinks><RecipeDef>HB_InstallReaperBlade</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Plasteel>80</Plasteel>
+      <ComponentSpacer>6</ComponentSpacer>
+    </costList>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+    <statBases>
+      <Mass>0.4</Mass>
+	    <MarketValue>2000</MarketValue>
+    </statBases>
+    <techHediffsTags>
+      <li>Advanced</li>
+	    <li>HB</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>HB_InstallReaperBlade</defName>
+    <label>install reaper blade</label>
+    <description>Install a reaper blade.</description>
+    <descriptionHyperlinks>
+      <ThingDef>HB_ReaperBlade</ThingDef>
+      <HediffDef>HB_ReaperBlade</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing reaper blade.</jobString>
+		<workAmount>4000</workAmount>
+    <uiIconThing>HB_ReaperBlade</uiIconThing>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>HB_ReaperBlade</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>HB_ReaperBlade</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Shoulder</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>HB_ReaperBlade</addsHediff>
+	</RecipeDef>
+</Defs>

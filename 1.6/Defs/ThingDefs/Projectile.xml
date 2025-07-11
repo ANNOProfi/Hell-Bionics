@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+    <ThingDef ParentName="BaseBullet">
+        <defName>Bullet_HellCannon</defName>
+        <label>hell cannon shell</label>
+        <graphicData>
+          <texPath>Things/Projectile/LauncherShot</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <shaderType>TransparentPostLight</shaderType>
+          <color>(254,189,58)</color>
+        </graphicData>
+        <thingClass>Projectile_Explosive</thingClass>
+        <projectile>
+          <damageDef>Flame</damageDef>
+          <!-- Use default damage from explosion def -->
+          <speed>45</speed>
+          <explosionRadius>2</explosionRadius >
+          <ai_IsIncendiary>true</ai_IsIncendiary>
+          <flyOverhead>true</flyOverhead>
+        </projectile>
+    </ThingDef>
+</Defs>

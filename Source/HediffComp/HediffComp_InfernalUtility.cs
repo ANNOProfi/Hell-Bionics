@@ -91,6 +91,9 @@ namespace HellBionics
             Scribe_Values.Look(ref plasmaPerTick, "plasmaPerTick");
             Scribe_Values.Look(ref infernalDashRange, "infernalDashRange");
             Scribe_Values.Look(ref ticksToOffset, "ticksToOffset");
+            Scribe_Values.Look(ref dashCost, "dashCost");
+            Scribe_Values.Look(ref dashCount, "dashCount");
+            Scribe_Values.Look(ref dashInitialised, "dashInitialised");
         }
     }
 }

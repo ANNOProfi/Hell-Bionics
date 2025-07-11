@@ -44,12 +44,12 @@ namespace HellBionics
 
         public override bool GizmoDisabled(out string reason)
         {
-            if(InfernalUtility.MaximumPlasma == 0)
+            if(InfernalUtility?.MaximumPlasma == 0)
             {
                 reason = "No Hediff for this ability. If you are seeing this, something has gone wrong.";
                 return true;
             }
-            if(InfernalUtility.RemainingPlasma < this.Props.plasmaCost)
+            if(InfernalUtility?.RemainingPlasma < this.Props.plasmaCost)
             {
                 reason = "Not enough Plasma".Translate(Pawn);
                 return true;
